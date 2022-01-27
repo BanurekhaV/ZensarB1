@@ -1,0 +1,7 @@
+E:\Banu\Zensar\Batch1\Day8\Jan27thPrj\Jan27thPrj\bin\Debug\Jan27thPrj.exe.config
+E:\Banu\Zensar\Batch1\Day8\Jan27thPrj\Jan27thPrj\bin\Debug\Jan27thPrj.exe
+E:\Banu\Zensar\Batch1\Day8\Jan27thPrj\Jan27thPrj\bin\Debug\Jan27thPrj.pdb
+E:\Banu\Zensar\Batch1\Day8\Jan27thPrj\Jan27thPrj\obj\Debug\Jan27thPrj.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\Day8\Jan27thPrj\Jan27thPrj\obj\Debug\Jan27thPrj.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\Day8\Jan27thPrj\Jan27thPrj\obj\Debug\Jan27thPrj.exe
+E:\Banu\Zensar\Batch1\Day8\Jan27thPrj\Jan27thPrj\obj\Debug\Jan27thPrj.pdb
