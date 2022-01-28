@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5AECDAA-E7EA-4F42-91F8-5893B0DF1492}</ProjectGuid>
+    <ProjectGuid>{56F15F70-137F-480D-98A4-C804B9DD0D99}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Jan27thPrj</RootNamespace>
-    <AssemblyName>Jan27thPrj</AssemblyName>
+    <RootNamespace>Jan28Prj</RootNamespace>
+    <AssemblyName>Jan28Prj</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Jan27thPrj.Checked_Unchecked_Exceptions</StartupObject>
+    <StartupObject>Jan28Prj.GenericLists</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,14 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Checked_Unchecked_Exceptions.cs" />
-    <Compile Include="ExceptionsEg.cs" />
-    <Compile Include="ExplicitInterface.cs" />
-    <Compile Include="IndexersEg1.cs" />
-    <Compile Include="IndexersEg2.cs" />
+    <Compile Include="CollectionsEg1.cs" />
+    <Compile Include="GenericLists.cs" />
+    <Compile Include="ListEg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties_in_Interfaces.cs" />
+    <Compile Include="StaticEg.cs" />
+    <Compile Include="UsingEg1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

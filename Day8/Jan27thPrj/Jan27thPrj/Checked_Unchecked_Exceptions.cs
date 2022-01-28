@@ -14,7 +14,44 @@ namespace Jan27thPrj
         //checked statement/expression
         static int CheckOverFlow()
         {
-            return 0;
+            int x = 0;
+            
+            try
+            {
+                //the below line raises an exception
+                x = checked(maxInt + 10);
+            }
+            catch(System.OverflowException e)
+            {
+                Console.WriteLine("Checked:" + e.ToString());
+            }
+            return x;
+        }
+
+        //unchecked expression
+
+        static int UnCheckOverFlow()
+        {
+            int x = 0;
+            try
+            {
+                x = maxInt + 10;
+            }
+            catch(System.OverflowException e)
+            {
+                Console.WriteLine("Unchecked : "+ e.ToString());
+            }
+
+            //overflow is suppressed
+            //the sum of 2147483647 + 10 is returned as -2147483639
+            return x;
+        }
+
+        static void Main()
+        {
+            Console.WriteLine("\nChecked output :{0}",CheckOverFlow());
+            Console.WriteLine("\nUnChecked output :{0}", UnCheckOverFlow());
+            Console.Read();
         }
     }
 }

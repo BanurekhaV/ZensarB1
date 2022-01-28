@@ -1,0 +1,27 @@
+Collections : Set of data that make up a collection datatype
+-Dynamic (resizable)
+-Different datatypes
+
+ArrayList                        List
+Hash Tables                      Dictionary
+Stacks  - Last in First Out
+Queues  - Fisrt in First Out
+Sorted List
+
+Arrayist : is a combination of Array and List
+           can have any datatypes as elements
+           is identified with an index position
+           arraylist with diffrent datatypes cannot be sorted.
+ 
+Hashtable: is a collection that stores data with a key value pair
+           Uses hashing technique to sort the keys
+           It does not use the inserted order or the sorted order
+           Keys have to be unique(cannot be duplicated)
+           Keys cannot be null
+           is used to search large data collections with huge records
+          
+Generics:Organizes and retrieves data effectively without compromising the type safety.
+It give better performance 
+
+Eg:List<T>
+T refers- Templated classes,methods,fields,properties etc.

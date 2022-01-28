@@ -1,0 +1,41 @@
+5. Write a program in C# Sharp to create a nested structure to store two data for an employee in an array. 
+
+Test Data:
+
+Create a nested structure and store data in an array :                              
+-------------------------------------------------------                          
+Name of the employee : H.Rana                                                    
+Input day of the birth : 05                                                      
+Input month of the birth : 02                                                    
+Input year for the birth : 58                                                    
+                                                                                 
+Name of the employee : S.Mathur                                                  
+Input day of the birth : 04                                                      
+Input month of the birth : 08                                                    
+Input year for the birth : 59 
+
+
+
+6. Write a program in C# Sharp to insert the information of two books. 
+
+Test Data :
+
+Insert the information of two books :                    
+-----------------------------------------                
+Information of book 1 :                                  
+Input name of the book : BASIC                           
+Input the author : S.TROELSTRA                           
+                                                         
+Information of book 2 :                                  
+Input name of the book : C+                              
+Input the author : G.RTRTG   
+
+                            
+Expected Output:
+
+1: Title = BASIC,  Author = S.TROELSTRA                  
+                                                         
+2: Title = C+,  Author = G.RTRTG 
+
+
+

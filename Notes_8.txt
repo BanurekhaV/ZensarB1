@@ -1,0 +1,148 @@
+Is-a Relationship (Inheritance)
+Has-a Relationship (Containership/Composition)
+
+car is a vechicle
+
+Engine
+car has an engine
+
+class car{
+
+string carname;
+long int carid;
+string car model;
+string manufacturer
+double price;
+Engine engine;
+
+car.engine.engineno;
+
+}
+
+class Engine
+{
+  int engineno;
+  float power;
+  string make;
+
+}
+
+Interface: Interfaces are like classes, but they have all abstract methods unlike a class
+-The derived classes have to implement all the methods declared in the interface.
+-A class can implement more than one interface
+-An interface can derive from other interfaces
+-Interfaces can have declarations of methods,properties
+-Interfaces are public by default
+-Framework does not allow any modifications to the default access specifiers
+-Interfaces have to be prefixed with I
+-Interfaces cannot be instantiated, but you can create reference variable
+
+Iinterface1 { method1,method2}:Iinterface2
+Iinterface2 {method3,method4}
+
+
+class class1:Iinterface1{
+4 methods have to be implemented
+
+Namespace: collection of namespaces,classes,interfaces,events,delegates
+
+Explicit Implementation : When any 2 interface has same signature, the derived class of those interface can do explicit implementation
+To implement the methods that are having the same signature, the derived class has to prefix the intreface name along with the method name
+eg <return type> <InterfaceName>.<Methodname>(<parameters>)
+-remove the public modifier (since the interface methods are by default public
+
+Indexers: Are virtual arrays or smart arrays
+They are like properties with get and set accessors
+They do not have names like properties, instead are referred using the this keyword
+They can be overloaded
+
+Why Indexers? When you want to treat the fields of the class as an array of elements of the object, we need indexers.
+
+Exceptions : To handle exceptions, we write our codes with try{.....} and catch{..} blocks
+
+finally{} is used for object cleaning, closing of database connections or files
+ This block executes irespective of exceptions or no exceptions
+
+Exceptions are classes that are specific to specific kind of errors
+Exception is the base class for all exceptions
+
+Checked Statements : are conditional evaluation to raise exceptions and catch
+
+Unchecked Statements : are statements that does not raise, but supresses the exception
+
+Custom/user defined Exceptions: 
+All user defined exception classes have to be derived from ApplicationException
+
+Dos and Donts of Exceptions
+1. It is a mechanism to identify and respond to the error condition
+2. Effective handling of exceptions will make the code robust and easier to debug.
+3. It helps in answering:
+   what went wrong - Type of exception
+   where did it go wrong - stack trace
+   why did it go wrong - Exception Message
+
+4. When we can check some errors using if like operators, then we should not use exceptions
+5. Use try{} finally{} blocks around the code that can potentially generate exception
+
+dispose()
+
+~Employee(){cw(..);}
+
+emp=null;
+GC.Collect();
+
+Using{} block
+
+helps to work with any read only object that can be used one time and after which, the object will be detaroyed and memory will be released with the help of inbuilt dispose();
+
+
+static constructors:
+ is used to initialize any static data and or in performing any particular action/actions that need to be performed only once for the program
+-This would be called before any of the objects of the class is initialized or any of the members are loaded on to the runtime environment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

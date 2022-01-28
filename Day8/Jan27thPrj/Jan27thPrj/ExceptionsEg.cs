@@ -40,7 +40,11 @@ namespace Jan27thPrj
                 // Console.WriteLine("OOPs!! something went wrong...contact admin");
                 Console.WriteLine(e.Message);
             }
-
+            
+            finally
+            {
+                Console.WriteLine("Reached Finally..");
+            }
             Console.Read();
         }
     }
