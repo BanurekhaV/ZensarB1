@@ -11,7 +11,7 @@ namespace Feb1Prj
     {
 
         //default Parameters
-        public static void Studetails(string fname, string lname, int age=20,string branch="CSC")
+        public static void Studetails(string fname, string lname, int age = 20,string branch="CSC")
         {
             Console.WriteLine($"Firstname : {fname}");
             Console.WriteLine($"Lastname : {lname}");
@@ -30,7 +30,7 @@ namespace Feb1Prj
             Studetails("Menaka", "Gandhi", 56);
             Studetails("Rohan", "Joshi", 45, "IT");
             //calling function with named parameters
-            Stud_dtls(age: 35, fname: "Raj", lname: "Bahadur", branch: "CSC");
+            Stud_dtls(age:35,branch:"ECE", lname:"Raj", fname:"Bahadur");
             Console.Read();
         }
     }

@@ -1,0 +1,46 @@
+Inline Function : A piece of code that can be executed as apart of some other function/statements without having to create a s seperate function and make calls to it.
+
+Anonymous Methods/Functions : A function that does not have any name to it.
+We can make use of annymous methods through delegates
+
+Generic Delegates:
+Delegates as Parameter to methods
+
+Event - Publishers - Subscribers
+-Events enable a class or object to notify other classes when something occurs/changes etc
+-The class that raises the event is publisher
+-The class that handles the event is subscriber
+-Publisher determines when an event is raised
+-Events can have multiple subscribers
+-Subscribers can handle events from multiple publishers
+
+Publisher is an object that contains the definition of the event and the delegate. The event-delegate association is also defined in this object. A publisher object invokes the event and it is notified to other objects
+
+A subscriber is an object that accepts the event and provides an event handler. The delegate in the publisher class invokes the method(event handler) of the subscriber class.
+
+//user-->event-->delegate-->function
+
+Files: IO
+Serialization: is  a process of converting object into byte streams so that we can save the data to a file or database. The reverse is called as Deserialization.
+
+Attributes/Decorators (Meta data that helps in the application build and execute process)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

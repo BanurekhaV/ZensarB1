@@ -1,2 +1,3 @@
 This is C# class on Delegates
 We are Learning Delegates
+Data tobe sent as streams to the file

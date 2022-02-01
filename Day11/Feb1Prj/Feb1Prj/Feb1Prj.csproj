@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Feb1Prj.Function_Arguments</StartupObject>
+    <StartupObject>Feb1Prj.Files2</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,8 @@
     <Compile Include="Delegates3.cs" />
     <Compile Include="Event2.cs" />
     <Compile Include="Events.cs" />
+    <Compile Include="Files1.cs" />
+    <Compile Include="Files2.cs" />
     <Compile Include="Function_Arguments.cs" />
     <Compile Include="GenericDelegates.cs" />
     <Compile Include="Program.cs" />
