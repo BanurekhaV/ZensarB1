@@ -1,0 +1,2 @@
+This is C# class on Delegates
+We are Learning Delegates
