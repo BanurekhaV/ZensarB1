@@ -1,0 +1,10 @@
+E:\Banu\Zensar\Batch1\Day12\Aysn_Await\Aysn_Await\bin\Debug\Aysn_Await.exe.config
+E:\Banu\Zensar\Batch1\Day12\Aysn_Await\Aysn_Await\bin\Debug\Aysn_Await.exe
+E:\Banu\Zensar\Batch1\Day12\Aysn_Await\Aysn_Await\bin\Debug\Aysn_Await.pdb
+E:\Banu\Zensar\Batch1\Day12\Aysn_Await\Aysn_Await\obj\Debug\Aysn_Await.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\Day12\Aysn_Await\Aysn_Await\obj\Debug\Aysn_Await.Form1.resources
+E:\Banu\Zensar\Batch1\Day12\Aysn_Await\Aysn_Await\obj\Debug\Aysn_Await.Properties.Resources.resources
+E:\Banu\Zensar\Batch1\Day12\Aysn_Await\Aysn_Await\obj\Debug\Aysn_Await.csproj.GenerateResource.cache
+E:\Banu\Zensar\Batch1\Day12\Aysn_Await\Aysn_Await\obj\Debug\Aysn_Await.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\Day12\Aysn_Await\Aysn_Await\obj\Debug\Aysn_Await.exe
+E:\Banu\Zensar\Batch1\Day12\Aysn_Await\Aysn_Await\obj\Debug\Aysn_Await.pdb

@@ -1,0 +1,29 @@
+Threads : Light weight process. Threads will be in queue till they get their time slice. Threads will have priorities.
+
+Life cycle : Start->Run->(Sleep/Aborted/Killed)->die naturally
+
+Expression Bodied members: C# 6.0 feature (simplifies syntactical expressions in C# prog)
+
+Exception Filters : allows to specify a conditional clause for each catch block. The filter is declared in the same line as that of the catch block
+
+Literal Improvements: Helps in enhancing the readability (numbers)
+
+Local Function: When we want to execute some piece of code multiple times with a function, we can do so by writing local functions (inner functions)
+- Local or inner functions cannot be overloaded
+- No Access Specifiers are allowed for inner functions
+- It can access all local variables of the Parent Function
+- If the Parent function does not make use of the local function, then compiler throws a warning.
+
+Object Initializer
+Collection Initializers
+
+Throws Expression: capacity of a function to throw a corresponding exception class by itself
+
+LINQ : Lang. Integrated Query
+
+Method Expression (lambda and extension method)
+
+Query Expression :is a way of interacting with any collections including databases
+Starts with a keyword from and ends with either select or group
+
+- 
