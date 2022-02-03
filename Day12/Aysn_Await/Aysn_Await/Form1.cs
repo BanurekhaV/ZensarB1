@@ -42,14 +42,23 @@ namespace Aysn_Await
 
             //int z = countChar();
             //label1.Text = "Processing file ..please wait...";
+            //label1.BackColor = Color.Red;
             //label1.Text = z.ToString() + " " + "Characters in the file";
             //task based using async and await
             Task<int> task = new Task<int>(countChar);
-            task.Start();
-            label1.Text = "Processing file.. please wait..";
+            task.Start();//it should go to the function countChar()
+            label1.BackColor = Color.Blue;
             label1.Text = "Will complete in some time";
             int z = await task;
+            label1.BackColor = Color.Red;
             label1.Text = z.ToString() + " " + "Characters in the File";
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Loginfrm frm = new Loginfrm();
+            frm.Show();
         }
     }
 }
