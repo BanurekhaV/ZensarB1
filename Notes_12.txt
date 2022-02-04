@@ -1,0 +1,47 @@
+AutoProperty Initializers
+
+HashCode: 
+-GetType() gets te type of the object. GetHashCode() returns the hash code for the current Type. It is a numeric value which is used to identify an object in the hash-based collection. 
+-Hash codes helps to do quick equality checks
+--Note: Two objects that return different hash codes, mean that the objects are not equal. The reverse is not true(Equal hash codes does not imply that the objects are same. 
+-Unequal objects can have identical hash codes.
+-Do not test for equality of hash codes to determine two objects are equal. 
+
+
+Object Pooling:
+  Shallow and Deep Copy
+
+Is vs As
+	Is								As
+is used to check if the runtime type of an 			It is used to perform conversion between compatible reference types or nullable
+object is compatible with given type
+The return type is a boolean					As operator returns the object when compatible else null 
+-Is used for boxing, unboxing					used for nullable,reference and boxing
+
+Equals() Vs ==
+
+Both are used to compare two value type data or reference type data.
+The == operator compares the reference identity, while the equals() method compares the contents
+
+Async Await 
+Await: a keyword that is used to suspend execution of the method until the awaited task is complete
+
+External Aliases: extern
+
+Assembly: Mydll.dll ver 1
+ 
+Mydll1.dll ver 2
+
+/r:Ass1=Mydll.dll 
+/r:Ass2=Mydll1.dll
+
+extern alias Ass1;
+extern alias Ass2;
+
+Tuples: a data structure that contains sequence of elements of different data types
+
+out parameters - These do not support async methods
+
+IEnumerable<string>fruits
+
+

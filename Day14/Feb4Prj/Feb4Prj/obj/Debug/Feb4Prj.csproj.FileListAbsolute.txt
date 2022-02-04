@@ -1,0 +1,7 @@
+E:\Banu\Zensar\Batch1\Day14\Feb4Prj\Feb4Prj\bin\Debug\Feb4Prj.exe.config
+E:\Banu\Zensar\Batch1\Day14\Feb4Prj\Feb4Prj\bin\Debug\Feb4Prj.exe
+E:\Banu\Zensar\Batch1\Day14\Feb4Prj\Feb4Prj\bin\Debug\Feb4Prj.pdb
+E:\Banu\Zensar\Batch1\Day14\Feb4Prj\Feb4Prj\obj\Debug\Feb4Prj.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\Day14\Feb4Prj\Feb4Prj\obj\Debug\Feb4Prj.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\Day14\Feb4Prj\Feb4Prj\obj\Debug\Feb4Prj.exe
+E:\Banu\Zensar\Batch1\Day14\Feb4Prj\Feb4Prj\obj\Debug\Feb4Prj.pdb

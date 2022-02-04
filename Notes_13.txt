@@ -1,0 +1,77 @@
+IComparable: Sort method know how to sort inbuilt collections, but what if we want to sort user defined types.
+-can be used as long as we have control of the user-defined classes.
+-If we wish to sort the object which is not accessible to you(some external references viz. dll), which can be accessed, but cant change the implementation. Then we can use Icomparer
+
+IComparer: has a method called Compare(Takes 2 objects as arguments).
+
+Name of Operator:This can produce the names of variables, type, members as string constants
+
+Iterators: Are used to retrieve elements from the collection. They can be used as a method or property. They cannot be used in events,static constructor.It cannot contain ref or out parameters.
+We can use yield statements either with return or break keywords, which has special meaning attached to yield.
+
+
+Ref Local and Ref Returns:
+RefLocal:Is  a new variable type that is used to store the reference
+-It is used in conjunction with ref returns to store reference in a local variable
+-Local variables now, can also be declared with the ref modifier
+
+
+pattern Matching: Object pattern matching with switch, if and when clauses
+
+DotNet Remoting: Is a mechanism for communicating between objects that are not in the same process
+
+COM-DCOM (marshalling - unmarshalling)
+
+- A framework that provides interaction between objects across applications and networks.
+It hides the most difficult aspects of communication like connections,marshalling data,reading, writing xml, SOAP(Simpe Object Access Protocol) data
+
+An object that is going to be a remote object is to be derived from MarshalByRefObject class or serialize the data using[Serializable]
+When a client activates a remote object, it receives a proxy to the remote object.
+
+Types of.net remotable objects:
+
+single call: Object per client
+singleton: Object for all client
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
