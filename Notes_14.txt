@@ -1,0 +1,121 @@
+Types of .Net Remotable Objects
+
+1.Single Call : 1 Objects per call/request/client
+2.Singleton: only one object for all clients/requests
+3.ClientActivatedObjects: Server Side objects get activated upon request from client
+
+Domain: 
+
+Contexts:
+
+Proxies : 1. Real Proxy or 2. Transparent Proxy
+
+Marshalling: By value or By Ref 
+Serialize : Soap/Binary formatters 
+Messaging Techniques: XML
+
+Channels:
+----------------------------------------------------------
+Solid Principles
+An object oriented approach to software structure design.
+It was conceptualized by Robert Martin
+To modularize the software, so that it becomes easy to understand, debug, refactor
+
+1. S : Single Responsibilty Principle(SRP):Every Class or Structure in the code should perform only one job/functionality. It should relate to one purpose.
+Example: Let us consider Class Employee has addEmployee(),PrintPaySlip(), CalculateTax(),CheckLeaveBalance(). As per SRP, we may split the above functions into seperate classes with one function each
+
+2. O :Open-Closed Principle(OCP):A s/w module/class should be open for extension and closed for modification.
+Example: Eg: ShapeInfo class has a method that informs about a particular shape type. You should not be allowed to go and modify the code to return area of circle.
+
+3. L:Liskov Substitution Principle(LSP):
+Example: If a class student has getHeight and getWeight methods, you should not be creating a derived class inorder to add a new functioanlity called calculateBMI()
+
+4. I:Interface Segregation Principle(ISP):Do not force the client applications to implement all non-required methods of the interface. Instead split the interface into smaller ones.
+
+5. D:Dependency Inversion Principle(DIP):We should use abstraction/interfaces instead of concrete implementation. Both High level and low level modules should be dependant on abstraction. Abstraction does not depend on Details, but details depend on abstraction.
+
+
+Advantages of SOLID principles:
+1. Reduction in dependencies (Decoupling)
+2. Easier Designs
+3. Better understanding
+4. Ensures maintenance
+5. Easily tested
+6. More scalable and reusable
+
+Design Patterns: Provide low-level solutions to implement the common problems or challenges. It suggests the best practices to be implemented based on experience
+GOF(Gang of Four):are the four authors who published a book on Resusable OO s/w. According to GOF the design patterns are based on 
+	1. Program to an interface not an implementation
+        2. Favor Composition over Inheritance
+
+All Design Patterns come under these classification:
+
+1. Creational Patterns: This pattern provides ways to create objects apart from the traditional use of new operator
+2. Structural Patterns: This pattern's emphasis is on class composition
+3. Behavioral Patterns: This pattern's emphasis is more on communication between objects
+
+Factory Pattern: Provides functionality to create objects without exposing the creational logic.It is also possible to refer the newly created object using a common Interface.
+
+Abstract Factory Pattern:
+
+Singleton Pattern:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+E:\Banu\Zensar\Batch1\Day15\RemoteServer\RemoteServer\bin\Debug\RemoteServer.exe.config
+E:\Banu\Zensar\Batch1\Day15\RemoteServer\RemoteServer\bin\Debug\RemoteServer.exe
+E:\Banu\Zensar\Batch1\Day15\RemoteServer\RemoteServer\bin\Debug\RemoteServer.pdb
+E:\Banu\Zensar\Batch1\Day15\RemoteServer\RemoteServer\obj\Debug\RemoteServer.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\Day15\RemoteServer\RemoteServer\obj\Debug\RemoteServer.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\Day15\RemoteServer\RemoteServer\obj\Debug\RemoteServer.exe
+E:\Banu\Zensar\Batch1\Day15\RemoteServer\RemoteServer\obj\Debug\RemoteServer.pdb

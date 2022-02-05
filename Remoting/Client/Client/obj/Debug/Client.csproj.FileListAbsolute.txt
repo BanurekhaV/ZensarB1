@@ -1,0 +1,10 @@
+E:\Banu\Zensar\Batch1\Remoting\Client\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\Remoting\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\Remoting\Client\Client\bin\Debug\Client.exe.config
+E:\Banu\Zensar\Batch1\Remoting\Client\Client\bin\Debug\Client.exe
+E:\Banu\Zensar\Batch1\Remoting\Client\Client\bin\Debug\Client.pdb
+E:\Banu\Zensar\Batch1\Remoting\Client\Client\bin\Debug\BaseLib.dll
+E:\Banu\Zensar\Batch1\Remoting\Client\Client\bin\Debug\BaseLib.pdb
+E:\Banu\Zensar\Batch1\Remoting\Client\Client\obj\Debug\Client.csproj.CopyComplete
+E:\Banu\Zensar\Batch1\Remoting\Client\Client\obj\Debug\Client.exe
+E:\Banu\Zensar\Batch1\Remoting\Client\Client\obj\Debug\Client.pdb
