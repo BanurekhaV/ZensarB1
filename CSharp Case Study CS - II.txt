@@ -1,0 +1,42 @@
+ Case Study Plan
+
+- Create Enroll class with the following structure:
+   - public class Enroll {
+	private Student student;
+	private Course course;
+	private LocalDate enrollmentDate;
+
+	//constructors & getters/setters
+     }
+
+- Next create AppEngine class which will contain the following methods:
+
+  - public void introduce(Course course) {
+
+    }
+
+  - public void register(Student student) {
+
+    }
+
+  - public Student[] listOfStudents() {
+
+    }
+
+  - public Course[] listOfCourses() {
+
+    }
+
+  - public void enroll(Student student, Course course) {
+
+    }
+
+  - public Enroll[] listOfEnrollments() {
+
+    }
+
+- Write App class with main method to test the above functionalities
+  - Now modify Info class by adding new methods for displaying Enrollment details
+
+
+

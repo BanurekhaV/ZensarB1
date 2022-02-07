@@ -1,0 +1,38 @@
+Case Study Plan
+
+- Create Student class (id, name, dateofbirth)
+  - Cover constructors, getters and setters
+
+- Create class Info
+  - Write a method called as:
+	public void display(Student student) {
+		//Code here to display the details of given student
+	}
+
+- Create App class with main method. Then
+
+  - Write a method called as scenario1 to:
+	- Create few objects of Student class
+	- Call the display method of Info class
+
+  - Write a method called as scenario2 to:
+	- Create array of Student class and store few objects in it
+	- Demonstrate how to iterate over the array and call the display method for each student
+
+  - Write a method called as scenario3 to:
+	- Take Student data as input from the user, store it in Student object
+	- Repeat the above process using loops
+	- Use Arrays to store the Student objects as covered in scenario2
+	- Finally iterate over the array to display all the collected data
+
+- Now ask the trainees to create Course class on their own (id, name, duration, fees)
+  - Modify Info class by adding one more method:
+	public void display(Course course) {
+		//Code here to display the details of given course
+	}
+  -  practice some of the scenarios again
+ 
+- Organize the code using namespaces (for ex: Zensar.casestudy.day1)
+
+
+
