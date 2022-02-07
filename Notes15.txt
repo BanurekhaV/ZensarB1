@@ -1,0 +1,129 @@
+Software Engg. Principles:
+1. Seperation of Concerns
+2. Modularization 
+3. Abstractions (What it does?) How it does(not required)
+4. Anticipation of Changes:
+    - Generality (non-coupled)
+    - Incremental Development
+    - Consistency (look and feel)
+5. DRY - Do not Repeat Yourself
+6. KISS - Keep it Simple Stupid
+7. YAGNI - You Aren't Gonna Need It(Avoid Features that are not required)
+8. SOLID
+
+Factory Pattern: Develop an application to show card details
+As per the appln : we have tight couplings between the client code and the card classes.
+If any new card have to be introduced, the client code will need to be modified.
+
+AbstractFactoty Pattern: For eg: we need to get the type of Animal
+
+AbstractAnimalFactory:
+  1. LandAnimalFactory
+  2. SeaAnimalFactory
+  3. WildAnimalFactory
+
+Animals of Sea				Animals of Land
+1. Octopus				1. Cat
+2. Shark				2.Dog
+3. Whale (addition)			3.Lion
+
+Animals of Wild
+1.Rhino
+2.Elephant
+
+SingletonPattern:
+1. Create a Singleton Object
+ public class SingleObject{
+private static SingleObject sobj= new SingleObject();
+
+//constructor private
+private SingleObject(){}
+
+//write a method to return the one and only object
+public static SingleObject GetObject()
+{
+  return sobj;
+}
+}
+
+Client :
+public class SingleObjectClient{
+
+public static void Main()
+{ 
+//SingleObject singleobj=new SingleObject(); //illegal and also no visibility
+SingleObject single=SingleObject.GetObject();
+single.Show();
+
+
+}
+
+}
+Dependency Inversion Principal: Says Components that depend on each other should always intercat via an abstraction, not directly with the concrete classes implementation
+
+Example: If we have data access layer and business layer, then they should communicate only throufh an interface for creation of objects
+Advantages:Can develop new features or changes independently
+           Testing becomes easy
+Inversion of Control(IOC): Design Principle that promotes loosely coupled layers, components and classes by inverting the control flow of the application
+
+Note: "Inversion of Control is principal, and Dependency Injection is implementation"
+
+3 types of dependencies exists:
+ 1. Constructor
+ 2. Property (setters)
+ 3. Method
+
+Instal Microsoft.unity.ioc.framework from nuget package manager solutions
+
+unityContainer.Register<IProduct,DL>();
+                         <From...  To>
+
+From:Type that will be requested
+To: Type that actually is returned
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s
