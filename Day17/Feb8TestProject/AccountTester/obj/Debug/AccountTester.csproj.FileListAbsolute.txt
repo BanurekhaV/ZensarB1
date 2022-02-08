@@ -1,0 +1,17 @@
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\NUnit3.TestAdapter.dll
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\NUnit3.TestAdapter.pdb
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\nunit.engine.dll
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\nunit.engine.api.dll
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\nunit.engine.core.dll
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\testcentric.engine.metadata.dll
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\AccountTester.dll
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\AccountTester.pdb
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\Feb8TestProject.dll
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\nunit.framework.dll
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\Feb8TestProject.pdb
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\bin\Debug\nunit.framework.xml
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\obj\Debug\AccountTester.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\obj\Debug\AccountTester.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\obj\Debug\AccountTester.csproj.CopyComplete
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\obj\Debug\AccountTester.dll
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\AccountTester\obj\Debug\AccountTester.pdb

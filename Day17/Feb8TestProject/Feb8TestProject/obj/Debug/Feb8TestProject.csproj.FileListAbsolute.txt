@@ -1,0 +1,6 @@
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\Feb8TestProject\bin\Debug\Feb8TestProject.dll
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\Feb8TestProject\bin\Debug\Feb8TestProject.pdb
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\Feb8TestProject\obj\Debug\Feb8TestProject.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\Feb8TestProject\obj\Debug\Feb8TestProject.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\Feb8TestProject\obj\Debug\Feb8TestProject.dll
+E:\Banu\Zensar\Batch1\Day17\Feb8TestProject\Feb8TestProject\obj\Debug\Feb8TestProject.pdb

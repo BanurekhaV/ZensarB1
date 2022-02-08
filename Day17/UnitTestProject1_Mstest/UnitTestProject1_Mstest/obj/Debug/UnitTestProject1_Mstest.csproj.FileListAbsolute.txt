@@ -1,0 +1,14 @@
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\bin\Debug\UnitTestProject1_Mstest.dll
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\bin\Debug\UnitTestProject1_Mstest.pdb
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\obj\Debug\UnitTestProject1_Mstest.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\obj\Debug\UnitTestProject1_Mstest.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\obj\Debug\UnitTestProject1_Mstest.csproj.CopyComplete
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\obj\Debug\UnitTestProject1_Mstest.dll
+E:\Banu\Zensar\Batch1\Day17\UnitTestProject1_Mstest\UnitTestProject1_Mstest\obj\Debug\UnitTestProject1_Mstest.pdb
