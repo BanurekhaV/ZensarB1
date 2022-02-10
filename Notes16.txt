@@ -1,0 +1,101 @@
+GAC Steps:First create an application of either a .dll or .exe based project. 
+Build the Application
+-Goto Project Properties, select signing option from the left side bar
+-Check sign assembly
+-select new from the drop down and click ok
+-give a meaningful file name for the strong name file.
+-can avoid password protection
+-select the algorithm from the dropdown, click ok
+- Observe that a file gets added to your solution as <given filename>.snk
+-Build the appln, again
+-go to Devl. Command Prompt 
+-run the command prompt as administrator
+- go to the gac_msil directory as below (using change directory command cd)
+-the path is C:\windows\microsoft.net\assembly\gac_msil
+-type gacutil -i(install) followed by the complete path of the assembly including the extension
+- observe a directory/folder getting created under that assembly name.
+- move to that assembly (cd <assembly name>
+- type dir and check the key that got generated
+
+to uninstall the assembly
+- place yourself in the gac_msil directory
+- type gacutil -u <assembly named folder>
+
+
+UNIT TESTING:
+
+1. Initiation : Concept of an Opportunity
+2. System Concept Development: Defines the scope or the boundary of the concepts
+3. Planning: Project Management Plan gets developed
+4. Requirement Analysis: A detailed Functional Requirements are analysed.
+5. Design :Requirements will be converted to a detailed system design
+6. Development : Convert all designs to information system
+      TDD : Test Driven Development
+7. Integration and Test : Confirmance to requirements and quality assurance testing
+8. Implementation : Testing on the Production Unit
+9. Maintenance and Operations : Based on reviews from all stake holders
+10. Disposition: End of system activities
+
+Testing : Is a process of executing a program/application with the intent of finding the sw bugs. 
+- Process of verification and validation 
+NUnit: Testing a small piece of an IPO cycle(input, process, output)
+
+Framework support for testing:
+1. NUnit: Used for all .Net Languages testing
+          A much used testing framework
+          It is an opensource sw
+2. MsTest: integrated with Visual studio
+3. MbUnit
+
+A testing application should use the various attributes/decorators to inform the runtime about certain metadata
+
+There is a concept of 3 A's
+1. Arrange (object creation etc.)
+2. Ask (method invocation etc.)
+3. Assert (checking for the code correctness)
+
+
+
+ICICI002 : my account no.
+
+HDFC123: beneficiary account
+
+MsTest: 
+[TestClass] : Marking the specific class for test
+[TestMethod] : Marking the method for test
+[TestInitialize] : Any initializing activity will be performed for each and every method, before it executes
+[TestCleanup] : Executes after each test method 
+[ClassInitialize] :
+[ClassCleanup]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

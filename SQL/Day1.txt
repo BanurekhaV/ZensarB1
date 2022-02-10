@@ -1,0 +1,104 @@
+--Creating databases
+create database ZensarDB
+
+--either thru the connect window symbol or issue the below command to connect to a particular database
+use ZensarDB
+--to create table <tablename>(colname col type constraints )
+create table Department
+(DeptId int primary key,
+DeptName varchar(20) not null,
+Budget float null)
+
+create table Employee
+(EmpId int primary key,
+EmpName varchar(40),
+Email nvarchar(20) unique,
+Gender char(7) ,
+Salary float,
+Dept int foreign key references Department(DeptId))
+
+--to drop a table from the database schema
+drop table Employee
+--query the table
+select * from Department
+select * from Employee
+-- to get help on the table
+sp_help Department
+sp_help Employee
+-- to insert data into few columns of the table
+insert into Department(DeptId,DeptName)
+values(1, 'IT')
+
+--to insert data into the table for all columns
+insert into Department
+values(2,'HR',null)
+
+--to insert more than one values into the table
+insert into Department
+values(3,'Admin',45000),
+(4,'Accounts',60000)
+
+--to add a column to the already existing Department table
+alter table Department
+add Loc varchar(20) 
+--to remove a column from the table
+alter table Department
+drop column Loc
+
+--to give values to the newly added column Loc
+--update <table name> set <column name>=value
+update Department
+set Loc='Hyderabad'
+where DeptId=1 
+--or
+update Department set Loc='Chennai' where DeptName='Admin'
+
+--to add aconstraint to the already existing table
+--you have alter and give a constraint name to the type of constraint using a keyword
+alter table Employee
+add constraint ChkSalary check(Salary >=5000)
+
+--drop a constraint
+alter table Employee
+drop constraint ChkSalary
+
+--to insert a record/tuple/row into employee
+insert into Employee
+values(104,'Prajwal','praj@zensar.com','Male',8000,2),
+(107,'Praveen','praveen@z.com','Male',6500,1),
+(108,'Preethi','preeth@z.com','Female',7000,2),
+(105,'Hemanth','h@z.com','Male',7200,3)
+
+--to delete one row from the employee table
+delete from Employee
+where EmpId=102
+--various select options
+--projection
+select EmpId, Gender, Salary from employee
+
+--alias names are meant for display purpose or some reference purpose
+select EmpId 'Employee Id' from employee
+--retrieve top record
+select top 2 * from employee
+select top 5 percent EmpName,Salary from Employee
+
+--Operators (arithmetic,relational,logical,bitwise,assignment)
+select Salary,Salary*12 'Annual Salary' from employee
+where dept=2
+
+select EmpName from Employee where Salary>=6000 and salary<=7500
+
+select Empname from employee where not salary  between 6500 and 7500
+
+select EmpName,Dept  from employee where dept is null
+select EmpName,Dept  from employee where dept is not null
+
+--wild card pattern matching
+-- %, _,[],^
+select * from employee where EmpName like '%i' 
+select * from employee where Empname like '_e%'
+select * from employee where Empname like'Pr[ae]%'
+select * from employee where Empname like'Pr[^e]%' 
+--in operator
+select * from employee where salary in(6000,7000,8000)
+select * from employee where salary not in(6000,7000,8000)

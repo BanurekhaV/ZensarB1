@@ -1,0 +1,91 @@
+Database : A collection of Info/Data that is relevant to the business
+
+Before Databases, data used to be stored in flat files
+-Parallel access - Concurrency
+-Data duplications - Redundancy
+-Right data       - Data Integrity
+-Accessing       - Durability
+-Protection	 - Security
+
+Database : DBase II /III /IV  - Cobol
+         : FoxBase/Foxpro
+Data Models:
+  1. Hierarchial Database - Focus 4GL
+  2. Network Database - implemented thru pointers
+  3. Relational Database - Tables/Relations/Matrix
+  4. Object Relational Database - BLOB CLOB Audio Video Huge Text
+  5. NoSQL database - MongoDB
+
+Products of RDBMS : Oracle, MySql, MSSQL, Informix, Postgress, Sybase, DB2
+
+Relations/Tables : Rows and columns structures, where row is represented by tuple/s and columns are attributes/domain
+RDBMS works on Relational Algebra : 6 sets (Restriction,Projection,Join,Difference,Divide,Union)
+
+Dr E.F Codd - 12 Golden Rules of Codd
+Dr. Chen - Entity Relationship Model (ER diagram)
+Integrity Connstraints :
+ 1. Entity Integrity : Primary key/Composite key
+ 2. Domain Integrity : Respect the datatype / Pool of values (Check,Default,Unique, null, not null)
+3. Referential Integity : Foreign Key
+
+SQL Basics : Structured Query Lang.
+Components: 5
+1. DDL (Data Definition Lang.)- Create,Alter,Drop,Truncate
+2. DML (Data Manipulation Lang.)- Insert,Update,Delete
+3. DQL (Data Query Lang.) - Select
+4. TCL (Transaction Control Lang.) - Commit, Rollback
+5. DCL (Data Control Lang) - Grant, Revoke
+
+Database -> tables > values to rows/cols
+
+ Query/DML actions
+
+SQL server 2017, 2019  
+Interface : IDE (SQL server Management Studio)
+
+Master : Master Database contains information about SQL server configuration. Without Master database, server can’t be started. This will store the metadata information about all other objects(Databases,Stored Procedure,Tables,Views,etc.) which is Created in the SQL Server .
+
+It will contain login information of users.
+
+Model :The model database sets a template for every database that was newly created . It serves as a template for the SQL server in order to create a new database. When we create a new database, the data present in model database are moved to new database to create its default objects which include tables, stored procedures, etc.
+
+Temp :The tempdb is a temporary location for storing temporary tables(Global and Local) and temporary stored procedure that hold intermediate results during the sorting or query processing and cursors.
+
+MSDB :The msdb database is used mainly by the SQL server Management Studio, SQL Server Agent to store system activities like sql server jobs, mail, service broker, maintenance plans, user and system database backup history
+
+create database <name of the database>
+
+identity columns : can be applied only to int datatypes
+                   need not give values
+                   will take up values based on the seed and keep incrementing next values
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
