@@ -1,0 +1,113 @@
+use ZensarDB
+--to remove all duplicate info in the query
+select distinct(dept) from employee
+
+--Aggregates in select
+select count(distinct(dept)) from employee
+where dept=2
+
+select avg(salary) from employee
+--cannot use functions on RHS
+select * from employee
+where salary >avg(salary)
+
+create table dummy
+(
+empid int ,
+ename varchar(30) ,
+sal float,
+primary key(empid,ename))
+--in composite pk, the system checks for unique combination
+--101  jyothi
+--101  swathi
+--102  jyothi
+--101  jyothi  -- duplicate
+
+--to sort the output on one or more columns
+select  Salary as Earnings from employee
+order by Gender, Earnings desc
+--you can order on multiple columns either asc or desc
+--you can use an alias column in the order by
+--you can sort on a column which is not in the select list
+/* overall query statements
+--select list
+--from clause
+--where clause
+--group by
+--having
+--order by*/
+
+/*group by for summary reporting
+1. You can group a column only when it is in the select list
+2. You cannot group an alias column
+3. All columns in the select list expect aggregates have to be included in the group by clause
+*/
+select Dept, count(*) as 'Number of Employees'
+from employee
+group by dept
+
+--return the maximum salary per dept
+select distinct(dept), max(salary) from employee
+group by dept
+
+--return the dept names and the max salary in that dept
+select deptname,max(salary) from employee,department
+where employee.dept=department.DeptId
+group by deptname
+
+--no .of male and female in each dept / deptnames
+select * from employee
+select distinct(gender)as Category, dept, count(gender) as 'no of employees' from employee
+group by gender,dept
+
+--no.of employees in each dept
+select count(gender), Dept from Employee 
+group by Dept
+
+--no.of employees in each dept name
+select count(gender), DeptName from Employee E, Department D
+where E.Dept = D.DeptID group by DeptName
+--when we want to restrict the no.of groups on some condition, we use having clause
+--list of depts where salary is greater than some min salary
+select dept, min(salary) 'Lowest Salary' from employee
+group by dept
+having salary>min(salary)
+
+select count(gender) from employee where dept=2
+group by gender
+
+--select the managers who have more than 5 employees
+select mgrid, count(empid) from employee
+group by mgrid
+having count(empid)>5
+
+/*joins
+-Equi Joins =
+-Natural Join =
+-Self Join - joining a table with itself giving alias names to them
+-Cross Join - cartesian prodcut
+-Inner join
+-Left Join - left outer join
+-Right Join - right outer join
+-Full   - full outer join   */
+select * from employee cross join department
+
+select * from employee,department where employee.dept=department.DeptId
+--the above can be written as
+select * from employee inner join department on employee.dept=department.DeptId
+--outer joins
+--left join or left outer join
+select * from employee left join department on employee.dept=Department.DeptId
+select * from employee left outer join department on employee.dept=Department.DeptId
+
+--right join or right outer join
+select * from employee right join department on employee.dept=Department.DeptId
+select * from employee right outer join department on employee.dept=Department.DeptId
+
+--full outer
+select * from employee full outer join department on employee.dept=Department.DeptId
+
+--self join
+select e1.empname as Employee, e2.empname as Manager
+from employee e1 inner join employee e2
+on e1.mgrid=e2.empid

@@ -1,0 +1,20 @@
+ Note: Consider the EMP and DEPT tables for the following queries. 
+
+1. Retrieve a list of MANAGERS. 
+2. Find out salary of both MILLER and SMITH. 
+3. Find out the names and salaries of all employees earning more than 1000 per 
+month. 
+4. Display the names and salaries of all employees except JAMES. 
+5. Find out the details of employees whose names begin with ‘S’. 
+6. Find out the names of all employees that have ‘A’ anywhere in their name. 
+7. Find out the names of all employees that have ‘L’ as their third character in 
+their name. 
+8. Find out the names of the employees whose name begin with ‘A’ or ‘M’. 
+9. Compute yearly salary of SMITH. 
+10. Compute daily salary of JONES. 
+11. Calculate the total monthly salary of all employees. 
+12. Print the average annual salary. 
+13. Select the name, job, salary, department number of all employees except 
+SALESMAN from department number 30. 
+14. List unique departments of the EMP table. 
+15. List the name and salary of employees who earn more than 1500 and are in department 10 or 30. Label the columns Employee and Monthly Salary respectively.
