@@ -1,0 +1,111 @@
+use ZensarDB
+
+select * from employee
+
+select empname,salary from employee where salary >all(
+									select salary from employee where dept=2)
+
+select empname,salary from employee where salary >
+             (select salary from employee where empname ='Hemanth')
+--sub query with logical operators
+--select lastname, jobid,salary of all employees whose jobid=the job id of the employee 141 and the 
+--salary greater than employee 143
+
+select empname, jobid,salary from employee where jobid=
+                            (select jobid from employee where empid=7369)  manager
+                and salary> (select salary from employee where empid=4999)  1200
+
+select empname,jobid,salary from employee where jobid='manager' and salary >1200
+
+--having,group by in subquery
+--list of departments where salary is greater then minimum salary of a department 2
+select dept,min(salary)
+from employee
+group by dept
+having min(salary)<>(select min(salary) from employee where dept=2)
+
+select dept,min(salary) from employee 
+
+group by dept
+
+--display empid,lastname,jobid and salary whose salary is less than 'salesman' 
+--but jobid should not be salesman
+
+select empid,lastname,jobid,salary from employee
+where salary<any (select salary from employee where jobid='salesman')
+and  jobid <>(select jobid from employee where jobid='salesman')
+
+--corelated subquery
+--Find all employees who earn more than the average salary in their dept
+select * from employee
+
+select empname,salary,dept from employee mq
+where salary >=(select avg(salary) from employee where dept= mq.dept)
+
+select dept,avg(salary) from employee group by dept
+select * from employee
+
+
+
+select empname,salary,dept from employee mq
+where salary >=(select avg(salary) from employee sq where sq.Dept= mq.dept)
+
+--in many cases, we can replace corelated subquery with inner join
+--convert the above query to a join
+select e1.empname,e1.Salary,e1.dept
+from employee e1 inner join
+(select dept,avg(salary)as dept_average_sal from employee 
+group by dept)as e2 on e1.Dept=e2.Dept where e1.Salary>=e2.dept_average_sal
+
+--update with corelated query
+--update salary of all employees whose salary is minimum in that dept
+
+select empname,dept,salary from employee
+update employee set salary=salary+100 from employee e1 where Salary<=
+(select min(e2.Salary) from employee e2 where e2.dept=e1.dept)
+select empname,dept,salary as updatedSalary from employee
+
+--T-sql Programming
+begin
+declare @result int, @num1 int=50
+declare @num2 int=140
+if(@num1 > @num2)
+set @result=@num1
+else
+set @result=@num2
+print @result
+end
+
+--display nos from 1-10 using T-sql
+declare @counter int =0
+while @counter < 10 
+begin
+ set @counter = @counter+1
+ if @counter=5
+  continue
+  if @counter=8
+  break
+ print @counter
+ end
+ --using case in select
+ select empname,dept,salary=
+ case when salary <7000 then 'Need a revision' else 'Good Salary' end
+ from employee
+
+ --using case in update
+ --increase all employees salary (with 6% where current salary <7000 and 4% where salary >7000)
+ select empname,salary from Employee
+
+ update employee
+ set salary=case  
+            when salary <=7000 then salary*1.06
+			else salary*1.04
+			end
+
+select empname,salary from Employee
+
+sp_help dummy
+select * from dummy
+delete from dummy where dummyid=2
+
+insert into dummy values('Desc3')

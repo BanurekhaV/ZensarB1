@@ -1,0 +1,108 @@
+list all the employees who earn more than hemanth
+
+1. find the salary of hemanth
+
+select salary from employee where empname ='hemanth'
+   8000
+select empname,salary from employee where salary > 8000
+
+subquery - query within a query
+
+select empname,salary from employee where salary >
+             (select salary from employee where empname =(
+
+                    select empname from employee where empid=105))
+
+Guideines for subquery : Enclose subqueries within parenthesis
+                         Place the subquery on the right hand side of the comparision condition
+                         Use single-row operators with single-row subquery and multi-row operatoes for multi-row subquery
+
+Operators for 
+ single-row subquery (<,>,<=,>=,!=,<>,=)
+ multi-row subquery (in,any,all)
+
+select salary from employee where salary in(
+			select salary from employee where deptid=2)
+
+Corelated subquery: where the inner query is dependent on the outer query for input
+
+diff. between nested subquery and corelated subquery:
+
+Nested: the inner query executes once, and returns the output to the main query.
+Corelated: for every row of the outer query, the inner query executes once
+
+
+File Groups: SQL server database has 3 types of files viz. Primary, Secondary, Transaction Log
+
+Primary File Group : Default group, which stores all data centric info.(.mdf) Startup information, and also pointers to other files
+
+User Defined/Secondary : All user defined files having extension .ndf
+
+Trn Log File : There has to be atleast one log file, which can log all the transactions. Is used to recover database info. in case of crash. The extension is .ldf
+
+alter database Zensardb
+add file
+(
+NAME='Orders',
+FILENAME='E:\Orders_file.ndf',
+SIZE=10MB,
+MAXSIZE=100MB,
+FILEGROWTH =3%
+
+)
+To Filegroup OrdersData
+
+create table customerOrder
+(
+col1, datatype zise constraints,
+col2 ...
+
+)
+on OrdersData
+
+Text/NText = 2^31 -1
+
+compute, compute by (deprecated after SQL 2012)
+Rollup, Cube - Extensions to Group By. They help in generation subtotals and totals
+
+T-SQL Programming
+
+begin
+
+decl variables
+t-sql statements
+end
+
+Variables : Local(@) and Global(@@)
+
+Whenever we create a primary key for a table, an unique clustered index gets created (this index is the one that ensures uniqueness)
+
+Indexes are of 2 types 1. Clustered (a table can have only one clustered index)
+  2. Non-Clustered ( a table can have many non clustered indexes)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
