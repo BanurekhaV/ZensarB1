@@ -1,0 +1,147 @@
+where phone like '_7%'
+update dummy set phone='007' where dummyid=3
+
+select * from employee,department where employee.Dept=department.DeptId
+insert into employee values(110,null,null,null,5800,null)
+insert into dummy values('Desc11','3545678')
+rollback
+,('Desc2','9877777')
+create clustered index idxdummydesc on dummy(dummydesc)
+alter table dummy
+add phone varchar(12)
+
+create unique nonclustered index idxphone on dummy(phone)
+drop index idxphone on dummy
+
+--filtered index
+create index ix_ename on employee(empname) where empname is not null
+--example for exists operator
+--to find employees(supervisors) who have atleast one person reporting to them
+select empid,lastname,jobid,deptid from employees e1
+where exists(select 'x' from employees e2 where e2.managerid=e1.employeeid)
+
+--RelationalOperators
+create table TableB
+(ID int,
+Tname varchar(50),
+Gendr varchar(10),
+Department varchar(20))
+
+insert into TableB values(1,'Pragya','Female','IT'),(2,'Shamshuddin','Male','Operations'),
+(4,'Srikanth','Male','Quality')
+select * from TableA select * from TableB
+
+select ID,Tname,gendr,department from tableB
+except
+select ID,Tname,gendr,department from TableA
+
+use Northwind
+select * from Customers
+select * from [Order Details]
+--cte example
+with mycte1 as(
+select OrderID,avg(UnitPrice) as 'Average_Price'
+from [Order Details]
+group by OrderID)
+select od.OrderID,od.Quantity,mycte1.Average_Price
+from [Order Details]od join mycte1 on od.OrderID=mycte1.OrderID
+
+select mycte1.Average_Price from mycte1
+
+--example 2
+with customers_in_USA as(
+select CustomerId,ContactName,City from Customers
+where Country='USA')
+select ContactName,City from customers_in_USA where City in('Eugene','Portland','Walla Walla')
+--example for multiple Cte
+with customers_in_USA as(
+select CustomerId,ContactName,City from Customers
+where Country='USA'),
+specific_City as(
+select ContactName,City from customers_in_USA where City in('Eugene','Portland','Walla Walla'))
+select ciu.CustomerID,ciu.ContactName,sc.City from customers_in_USA ciu,specific_City sc
+where ciu.ContactName=sc.ContactName
+order by ciu.ContactName
+
+set implicit_transactions off -- default, which means all transactions will be autocommited, 
+--unless specified explicitly using begin transaction
+--if you want to control the transactions, then set the implicit_transactions to on
+begin transaction
+insert into dummy values('Zensar2','0000000002')
+select * from dummy
+save transaction t1
+update employee set empname='Sahir Bhat' where empid=110
+select * from employee where empid=110
+save transaction t2
+delete employee where empid=110
+select * from employee
+save transaction t3
+insert into Department values(5,'Operations','Kolkatta')
+rollback  -- the entire transaction will be rolled back
+rollback transaction t3 -- insert into department will be rolled back
+rollback transaction t2 --depratment insert and employee delete will be rolled back
+rollback transaction t1 --
+commit
+
+begin transaction
+insert into dummy values('Zensar2','0000000002')
+select * from dummy
+save transaction t1
+update employee set empname='Sahir Bhat' where empid=110
+select * from employee where empid=110
+save transaction t2
+delete employee where empid=110
+select * from employee
+save transaction t3
+insert into Department values(5,'Operations',100000,'Kolkatta')
+select * from department
+rollback transaction t1 
+commit
+
+--stored procedure examples
+--creation of a procedure
+create procedure proc1
+as 
+begin
+select * from employee,department where Employee.Dept=Department.DeptId
+end
+--to execute the procedure
+execute proc1
+
+--procedure with input parameters
+create or alter proc getEmployeeSalary @eid int
+as
+begin
+select EmpName,Salary from employee where EmpId=@eid
+end
+
+exec getEmployeeSalary 104
+
+--procedures with output parameter
+create or alter proc updateEmpSalary @eid int , @updSal float output
+as
+begin
+select @updSal=Salary+500 from employee where EmpId=@eid
+end
+
+--to execute the above
+--1 st way 
+declare @updated_Salary float
+exec updateEmpSalary 101, @updated_Salary output
+print @updated_Salary
+
+--2nd way by changing the order
+declare @sal float
+exec updateEmpSalary @updSal=@sal output , @eid=101
+select @sal
+
+--using the return parameter of a procedure to return any integer datatype
+create or alter proc getDept @ename varchar(20)
+as
+begin
+return (select Gender from employee where EmpName=@ename)
+end
+
+declare @did varchar(8)
+exec @did=getDept 'Hemanth'
+print @did

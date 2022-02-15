@@ -1,0 +1,120 @@
+Clustered Index: Sorts the physical order of the table
+                 It is created automatically on the primary key
+                 One clustered index per table
+                 We can create a clustered index for a table which has no primary key defined
+
+Non Clustered : Can have many non-clustered index per table
+                Does not sorth the Physical order
+                It creates a seperate index table on the column indexed
+
+Unique NonClustered: Creates a index that checks for duplication
+
+Filtered Index: An index created from a subset of rows. It is laways a non-clustered index type. Apply where clause to filter
+
+In : used with where clause. it matches a particular value. it works like a mulyiple or
+
+select col1,col2...
+from table/tables
+where col in(l1,l2,l3,l4,l5)
+
+Exists: Operator used in subqueries. It is used to check existence of the record. It returns boolean
+
+select colnames..
+from table name
+where exists(select colnames from table where condition)
+
+Union: Combine 2 or more resultsets(output of a query)into a single set, without duplicates
+Union all: same as above but includes duplicates
+Intersect: Takes data from 2 resultsets which are common
+Except: Takes data from first resultset and not the second
+
+CTE : are temporary resultsets with a name
+-If we would like to have the results of any query stored somewhere, which can be used for any further querying, we can do so with the help of Common Table Expressions(CTE).
+-This is avialable within the same scope of execution
+
+Transactions: A unit of work to be executed fully
+
+set implicit_transaction off/on
+
+Begin transaction : within this you can have any valid sql statements.
+The transaction would terminate on the following conditions:
+ a.Commit
+ b.Rollback
+ c.System Crash
+ d.Unexpected loging off
+
+Acid Properties: Atomicity, Consistency, Isolation, Durability
+
+Isolation levels: Read Uncommited
+                  Read Committed
+                  Repeatable Read
+                  Serilaizable
+Locks:
+
+Shared Locks and exclusive locks : can be applied at the table level, page level, row level lock
+
+Procedures: series of instructions/statements for execution
+re-usable piece of SQL instructions/statements/commands, stored inside the database schema, which can be called, many times. It gets created with the query plan once and reuses the same plan again and again.
+
+Every procedure returns an integer datatype (scalar)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
