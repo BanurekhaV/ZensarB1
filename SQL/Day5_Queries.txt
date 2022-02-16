@@ -115,6 +115,198 @@ begin
     print 'Transaction committed'
    end
  end
+
+exec sp_ProductSale 103,10
+
+SELECT    
+    *
+FROM    
+    sys.messages where message_id=102
+
+--functions
+drop function Addtwonumbers
+create function Addtwonumbers(@a int, @b int)
+returns int
+as
+begin
+return @a * @b
+end
+--to execute the above function
+print dbo.Addtwonumbers(10,20)
+select dbo.Addtwonumbers(5,6)as Product
+select ZensarDb.dbo.Addtwonumbers(10,10)
+
+--write a function called as CalculateArea that takes length and breadth as parameters and returns the
+--area of rectangle
+
+--Table valued Functions :
+--will not have begin and end keyword
+--will have table along with returns
+--can be used in where clause or join clause 
+
+--inline - table valued functions
+create function fn_getEmployee(@ename varchar(20))
+returns table
+as
+return (select Empid,Empname,Salary,dept from employee where empname=@ename)
+
+select *from fn_getEmployee('Sahir')
+
+--table valued function which creates a structure also known as multi-statement table valued functions
+use Northwind
+
+create or alter function GetAllCustomersByCountry
+(@country varchar(20))
+returns
+@CustomersByCountry table(
+cust_id varchar(12),
+cust_name varchar(30),country varchar(20))
+as
+begin
+insert into @CustomersByCountry
+select CustomerID,ContactName,Country from customers where country=@country
+if @@ROWCOUNT=0
+begin
+insert into @CustomersByCountry
+values('','No Customers Found',null)
+end
+return
+end
+
+select * from GetAllCustomersByCountry('India')
+
+--trigger
+create or alter trigger trgInsertEmployee
+on Employee
+for insert
+as
+begin
+select * from inserted  -- to show the newly added record
+print 'inserted one row into employee'
+end
+
+insert into employee values(112,'TestEmployee','test1@test.com','others',10000,null)
+
+select * from employee
+
+create or alter trigger trgUpdateEmployee
+on Employee
+for update
+as
+begin
+select * from deleted 
+select * from inserted
+declare @oldid int, @olddept int
+declare @oldname varchar(30),@oldgender varchar(10)
+select @oldid=Empid from deleted
+select @oldname=upper(Empname) from deleted
+select @oldgender=Gender from deleted
+select @olddept=Dept from inserted
+insert into TableA
+values(@oldid,@oldname,@oldgender,@olddept)
+select * from TableA
+end
+
+update employee set salary=8001, Dept=3 where empid=107
+
+select upper(Empname) from employee
+--create an audit table
+create table Audit_table
+(msg varchar(max))
+
+create or alter trigger trgAudit_Insert
+on employee
+for insert
+as
+begin
+declare @id int
+select @id=EmpId from inserted
+insert into Audit_Table
+values('New Employee with ID ' + cast(@id as varchar(6)) + ' has joined office at '
++ cast(getdate()as nvarchar(24)))
+end
+
+create or alter trigger trgAudit_delete
+on employee
+for delete
+as
+begin
+declare @id int
+select @id=EmpId from deleted
+insert into Audit_Table
+values('Employee with ID ' + cast(@id as varchar(6)) + ' has left the office at '
++ cast(getdate()as nvarchar(24)))
+end
+
+insert into employee values(113,'SampleEmployee','ss@s.com','Male',11000,null)
+delete from employee where empid=111
+
+select * from Audit_table
+
+--instead of trigger (instead of any dml, trigger should be fired)
+create trigger trginsteadofInsert
+on Department
+instead of insert
+as
+begin
+print 'Cannot add new Department'
+rollback transaction
+end
+
+select * from department
+insert into department values(5,'Operations',67000,'Bangalore')
+
+drop trigger trginsteadofinsert
+--DDL triggers
+--2 types 
+--1. Database scoped triggers
+--2. Server Scoped Triggers
+
+--database scoped trigger example
+drop trigger trgRestrictCreate on database
+
+create trigger trgRestrictCreate
+on database
+for create_table
+as
+begin
+print 'You cannot create a table in this database'
+rollback transaction
+end
+
+drop table t1
+create table t1
+(id int, ename varchar(10))
+
+alter table dummy
+add col1 int
+
+--server scoped trigger
+drop trigger trg_All_Restrict on all server
+
+create trigger trg_All_Restrict
+on All Server
+for create_table,alter_table
+as
+begin
+print 'You cannot create or alter tables in any database'
+rollback transaction
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
 
 exec sp_ProductSale 103,5

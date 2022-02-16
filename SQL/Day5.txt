@@ -1,0 +1,49 @@
+Procedures: 
+1. Can call other procedures or functions
+
+Error Handling:
+Error Number:
+Every Sql Error will have a unique error no which is always <50000 for all predefined errors, and >50000 for all user defined errors
+Error Message:
+Brief information describing the error(max characters 2047)
+Severity Level:It tells the importance of the error and the value is between 0-24 out of which
+ 0-9 : are not severe (information)
+ 11-16 : Indicates errors created by the user
+ 17-19: Software errors that cannot be corrected by the user(report to the admin)
+ 20-24: Indicates fatal errors, that can damage the system
+State:It is an arbitrary value, not very important, and can range between 0-127. Used to refer to the same kind of errors
+
+Functions: Are like stored procedures, but with some limitations
+- All functions should return a scalar data type using a keyword 'returns' (informs the datatype to be returned by the function)
+- Functions may or may not take input parameters
+- In the function body, we return the value to the caller using a keyword 'return'
+- Functions need a two part qualification to execute
+
+Triggers: are like stored procedures/functions that gets fired automatically either on the DML actions or DDL actions.
+Advantages of triggers are : used in business rules to set restrictions.
+
+DDL triggers and DML Triggers
+
+DML : After Trigger and Insteadof trigger
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
