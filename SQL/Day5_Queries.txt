@@ -1,0 +1,120 @@
+--example for function/other procedure calls inside a procedure
+create or alter proc sampleproc(@name varchar(20))
+as
+begin
+select concat('Hello' , @name)
+ exec proc1
+end
+
+begin
+declare @name varchar(10)
+set @name='Zensar'
+exec sampleproc @name
+end
+
+--to get the text of any saved object
+sp_helptext proc1
+
+--procedure to update the salary of a given employee using some T-SQL
+create or alter proc sp_updSalary(@eid int, @incrementSal int)
+as
+begin
+declare @newsalary float
+set @newsalary=(select Salary from employee where empid=@eid)
+if(@newsalary<7000)
+  begin
+   set @newsalary=@newsalary+@incrementSal
+   print @newsalary
+   update employee set Salary=@newsalary where empid=@eid
+  end
+else
+  begin
+   print 'Salary is greater than 7000'
+  end
+end
+select * from employee1
+
+exec sp_updSalary 103,100
+exec sp_addmessage 57000, 15,'invalid info'
+
+sp_helptext sp_addmessage
+
+--error handling inside procedure
+create proc My_proc
+as
+begin
+ begin try
+ select Salary+EmpName from employee where empid=106
+ end try
+ begin catch
+  print 'Invalid operation in My_proc'
+  end catch
+end
+
+exec My_proc
+--error handling 2
+create table Product
+(ProductId int primary key,
+ProductName varchar(50),
+Price int,
+QuantityAvailable int)
+
+insert into Product
+values(101,'Laptop',52000,100),
+(102,'Desktop',35000,25),
+(103,'Tablet',40000,50),
+(104,'Mobile',20000,55)
+
+create table ProductSales
+(ProductSalesId int primary key,
+ProductID int,
+QuantitySold int)
+
+select * from Product 
+select * from ProductSales
+
+--create a procedure
+create or alter procedure sp_ProductSale(@pid int, @qtytosell int)
+as
+begin
+--first we check to see the stock availability for the product to be sold
+declare @stockAvailable int
+select @stockAvailable=QuantityAvailable from Product where ProductId=@pid
+--we need to throw an error if qtytosell is more than the stockavailable
+if(@stockAvailable<@qtytosell)
+ begin
+  print 'Not Enough Stock'
+ end 
+ else
+begin  
+  --we start a transaction
+ begin Transaction
+  --first we need to reduce the quantityavailable in product table
+  update Product set QuantityAvailable=(QuantityAvailable-@qtytosell)
+  where ProductId=@pid
+  --calculate the MAX of ProductSalesId for the ProductSales table
+  declare @maxproductsalesid int
+  select @maxproductsalesid=case
+  when Max(ProductSalesId)is null then 0
+  else max(ProductSalesId)
+  end 
+  from ProductSales
+  --increment the @maxproductsales id by 1, so that we dont get primary key violation
+  set @maxproductsalesid=@maxproductsalesid + 1
+  --we need to insert one row in the productsales table
+  insert into ProductSales 
+  values(@maxproductsalesid,@pid,@qtytosell)
+  if(@@ERROR<>0)
+   begin
+    rollback transaction
+	print 'Transaction Rolled Back'
+   end
+   else
+   begin
+    commit transaction
+    print 'Transaction committed'
+   end
+ end
+end
+
+exec sp_ProductSale 103,5
