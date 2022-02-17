@@ -1,0 +1,85 @@
+Cursors : Storage Locations that can store the resultsets/recordsets
+          It allows to retrieve each row at a time.
+          To manipulate the data-update,perform calculations
+	  It is a pointer to a row
+
+2 types: Implicit and Explicit
+
+
+Life Cycle of an explicit cursor:
+ 1. Declare a cursor
+ 2. Open the cursor
+ 3. Fetch the records
+ 4. Iterate the recordset
+     point 3 n 4 will be iterating till end of cursor
+ 5. Close the cursor
+ 6. Deallocate the cursor
+
+Explicit Cursors : 1. Forward only : Fastest cursor. Moves only in the forward direction. No scrolling. Can perform DML operations
+
+2. Static cursors : The data is static and read only. Allows back and forth movements. It is slow. Consumes more memory
+
+3. Dynamic curosrs : Allows DML Operations. Scrollable. All changes can be seen inside the cursor
+
+4. Keyset Cursors:Is in between a static and dynamic 
+
+Limitation sof Cursor: Memory consumption is high
+                       Network resources usage for fetching data
+                       It imposes lock on the resources
+                       performance will be slow
+
+
+ADO .Net : Activex Data Objects
+
+CRUD Operations   DESKTOP-PU8R89M\BRSQL
+
+Connection class : we will establish connection to the data source(oracle, Sql server, xml)
+
+Command class: help in issuing database commands
+
+DataReader class : to see the output of the command 
+
+DataAdapter class : helps in data manipulation
+  DataSets
+     DataTables
+       DataRows
+       DataColumns
+       DataConstraints
+       DataRelations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

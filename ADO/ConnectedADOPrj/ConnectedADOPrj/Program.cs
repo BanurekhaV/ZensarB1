@@ -17,8 +17,9 @@ namespace ConnectedADOPrj
         static void Main(string[] args)
         {
             // InsertData();
-            DeleteData();
-            SelectData();
+            // DeleteData();
+            //SelectData();
+            ScalarData();
             Console.Read();
         }
 
@@ -111,6 +112,15 @@ namespace ConnectedADOPrj
                 else
                     Console.WriteLine("Could not delete the record..");
             }
+        }
+
+        //example for executescalar
+        static void ScalarData()
+        {
+            con = getConnection();
+            cmd = new SqlCommand("select count(Empid) from employee", con);
+            int count =Convert.ToInt32(cmd.ExecuteScalar());
+            Console.WriteLine($"No of employees : {count}");
         }
         static SqlConnection getConnection()
         {

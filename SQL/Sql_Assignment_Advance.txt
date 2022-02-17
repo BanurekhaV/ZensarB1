@@ -1,0 +1,22 @@
+1.	Write a T-SQL Program to generate complete payslip of a given employee with respect to the following condition
+a)	HRA  as 10% Of sal
+b)	DA as  20% of sal
+c)	PF as 8% of sal
+d)	IT as 5% of sal
+e)	Deductions as sum of PF and IT
+f)	Gross Salary as sum of SAL,HRA,DA and Deductions
+g)	Net salary as  Gross salary- Deduction
+
+2.	Write a T-SQL Program to Display complete result of a given student. (Note: Consider 10th standard result sheet and Student table structure as (sno,sname,maths,phy,comp)
+
+3.	Write a T-SQL Program to find the factorial of a given number.
+
+4.	Create a stored procedure to generate multiplication tables up to a given number.
+
+5.	Create a user defined function calculate Bonus for all employees of a  given job using following conditions
+a.	       For Deptno10 employees 15% of sal as bonus.
+b.	       For Deptno20 employees  20% of sal as bonus
+c.	      For Others employees 5%of sal as bonus
+
+6.	Create a trigger to restrict data manipulation on EMP table during General holidays. Display the error message like “Due to Independence day you cannot manipulate data”
+Note: Create holiday table as (holiday_date,Holiday_name) store at least 4 holiday details

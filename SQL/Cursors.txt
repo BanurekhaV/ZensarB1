@@ -1,0 +1,85 @@
+use ZensarDB
+
+select * from employee 
+--forward only cursor
+declare @ename varchar(40), @deptname varchar(20),@sal float
+--declare the cursor and the query for the cursor
+declare emp_cursor cursor
+for select Empname, Salary, Deptname from employee
+join department on employee.Dept=department.DeptId
+--open the cursor
+open emp_cursor
+--fetch the cursor
+fetch from emp_cursor into @ename,@sal,@deptname
+while @@FETCH_STATUS=0
+  begin
+    if(@sal <7000)
+	  begin 
+	     print @ename + 'Salary is :' + cast(@sal as varchar(12))
+	  end
+	else
+	  begin
+	    print @ename + ' Salary is Greater than 7000'
+      end
+	  
+   fetch next from emp_cursor into @ename,@sal,@deptname
+  end
+  select @@FETCH_STATUS
+close emp_cursor
+deallocate emp_cursor
+
+--static cursors
+declare @ename varchar(40), @deptname varchar(20),@sal float
+--declare static cursor and the query for the cursor
+declare emp1_cursor cursor static
+for select Empname, Salary, Deptname from employee
+join department on employee.Dept=department.DeptId
+open emp1_cursor
+fetch relative 3 from emp1_cursor into @ename,@sal,@deptname
+while @@FETCH_STATUS=0
+ begin
+   if(@sal>7000)
+     begin
+	  Print @ename +' :Salary > 7000'
+     end
+   else
+     begin
+	    print @ename +' :Salary < 7000'
+     end
+ fetch next from emp1_cursor into @ename,@sal,@deptname
+end
+close emp1_cursor
+deallocate emp1_cursor
+
+select empname, salary,dept from employee
+
+--dynamic cursors	
+		  
+ declare @ename varchar(40), @deptname varchar(20),@sal float
+--declare static cursor and the query for the cursor
+declare emp2_cursor cursor dynamic
+for select Empname, Salary, Deptname from employee
+join department on employee.Dept=department.DeptId
+open emp2_cursor   
+fetch next from emp2_cursor into @ename,@sal,@deptname
+
+while @@FETCH_STATUS=0
+ begin
+   if(@sal<7000)
+     begin
+	   update employee
+	   set Salary=Salary+200 where current of emp2_cursor
+	   print 'updated salary of '+ ' '+ @ename +'is:'+ cast(@sal as varchar(12))
+     end
+	else
+	   begin
+	     print @ename +' ' + 'has good salary'
+	   end
+	 fetch next from emp2_cursor into @ename,@sal,@deptname
+  end
+ close emp2_cursor
+ deallocate emp2_cursor
+
+select * from employee
+	
+sp_helptext trgUpdateEmployee
