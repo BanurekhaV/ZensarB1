@@ -1,0 +1,7 @@
+E:\Banu\Zensar\Batch1\ADO\Day2Prj1\Day2Prj1\bin\Debug\Day2Prj1.exe.config
+E:\Banu\Zensar\Batch1\ADO\Day2Prj1\Day2Prj1\bin\Debug\Day2Prj1.exe
+E:\Banu\Zensar\Batch1\ADO\Day2Prj1\Day2Prj1\bin\Debug\Day2Prj1.pdb
+E:\Banu\Zensar\Batch1\ADO\Day2Prj1\Day2Prj1\obj\Debug\Day2Prj1.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\ADO\Day2Prj1\Day2Prj1\obj\Debug\Day2Prj1.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\ADO\Day2Prj1\Day2Prj1\obj\Debug\Day2Prj1.exe
+E:\Banu\Zensar\Batch1\ADO\Day2Prj1\Day2Prj1\obj\Debug\Day2Prj1.pdb
