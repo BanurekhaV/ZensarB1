@@ -1,0 +1,37 @@
+Day 3 & 4 Case Study Plan
+
+- Enchance the Enroll class from Day 2 and use Collection API instead of Arrays
+
+- Then the next step is to create user interface for our application.
+
+- Create an abstract class/interface (UserInterface) with the following methods:
+	public void showFirstScreen();
+	public void showStudentScreen();
+	public void showAdminScreen();
+	public void showAllStudentsScreen();
+	public void showStudentRegistrationScreen(); // Execute the register method of AppEngine class
+	public void introduceNewCourseScreen();
+	public void showAllCoursesScreen();
+
+  - The code for showFirstScreen() may look like this :
+
+	public void showFirstScreen() {
+		Console.WriteLine("Welcome to SMS(Student Mgmt. System) v1.0");
+		Console.WriteLine("Tell us who you are : \n1. Student\n2. Admin");
+		Console.WriteLine("Enter your choice ( 1 or 2 ) : ");
+		int op =Convert.ToInt32(Console.ReadLine());
+		
+		switch(op) {
+		case 1:
+			showStudentScreen();
+			break;
+		case 2:
+			showAdminScreen();
+			break;
+		}
+	}
+
+- From the App class now, all we would do in the main method is:
+   - new UserInterface().showFirstScreen();
+
+

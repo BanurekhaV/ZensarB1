@@ -32,6 +32,12 @@ namespace Day2Prj1
             DataAccess da = new DataAccess();
             da.InsertRegion();
         }
+
+        public void StoredProcCall()
+        {
+            DataAccess da = new DataAccess();
+            da.StoredProcCall();
+        }
     }
 
     class DataAccess
@@ -39,7 +45,7 @@ namespace Day2Prj1
         string connection = "data source=DESKTOP-PU8R89M\\BRSQL;initial catalog=Northwind;integrated security=true";
         static SqlConnection con;
         static SqlCommand cmd;
-        SqlDataReader dr;
+        static SqlDataReader dr;
         public Region reg;
        private SqlConnection getConnection()
         {
@@ -78,6 +84,7 @@ namespace Day2Prj1
             //reg.RegionId = 8;
             //reg.RegionDescription = "Testing Region";
             cmd = new SqlCommand("insert into region values(@rid,@rdesc)", con);
+           // cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@rid", reg.RegionId);
             cmd.Parameters.AddWithValue("@rdesc", reg.RegionDescription);
             int result = cmd.ExecuteNonQuery();
@@ -85,16 +92,49 @@ namespace Day2Prj1
             {
                 Console.WriteLine("Inserted one Region");
             }
+            con.Close();
         }
-        
+        public void StoredProcCall()
+        {
+            con = getConnection();
+            Console.WriteLine("Enter Customer ID:");
+            string custid = Console.ReadLine();
+            //calling procedure with SqlCommand's Parameter collection
+            cmd = new SqlCommand("CustOrdersOrders", con);//procedure name is passed to the command object
+            cmd.CommandType = CommandType.StoredProcedure;
+            /* cmd.Parameters.AddWithValue("@customerid", custid);
+
+             dr=cmd.ExecuteReader();
+             while(dr.Read())
+             {
+                 Console.WriteLine(dr["OrderID"]+ " "+ dr["OrderDate"]+ " "+ dr["RequiredDate"]+ " "+dr["ShippedDate"]);
+             }
+             con.Close();*/
+            //calling procedure with Sqlparameter Class
+            SqlParameter sqlparam = new SqlParameter();
+            sqlparam.ParameterName = "@customerid";
+            sqlparam.Value = custid;
+            sqlparam.DbType = DbType.String;
+            sqlparam.Direction = ParameterDirection.Input;
+            cmd.Parameters.Add(sqlparam);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Console.WriteLine(dr["OrderID"] + " " + dr["OrderDate"] + " " + dr["RequiredDate"] + " " + dr["ShippedDate"]);
+            }
+            con.Close(); 
+
+        }
+
     }
     class Client
     {
         static void Main(string[] args)
         {
             Region r = new Region();
-            r.InsertRegion();
-            r.DisplayRegion();
+           // r.InsertRegion();
+           // r.DisplayRegion();
+            r.StoredProcCall();
             Console.ReadLine();
         }
     }
