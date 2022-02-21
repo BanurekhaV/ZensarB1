@@ -52,16 +52,18 @@ namespace DisconnectedPrj
                 }*/
 
                 //inserting one new row into the datatable of the dataset
-                //SqlCommandBuilder scb = new SqlCommandBuilder(da);
+                SqlCommandBuilder scb = new SqlCommandBuilder(da);
                 da.Fill(ds);
                 //inserting or adding one new row
+             
                 DataRow drow = ds.Tables["NorthwindRegion"].NewRow();
-                drow["RegionID"] = 11;
-                drow["RegionDescription"] = "Disconnected Region";
+                drow["RegionID"] = 13;
+                drow["RegionDescription"] = "Disconnected Region3";
                 //add the newly create row to the data table of the dataset
                 ds.Tables["NorthwindRegion"].Rows.Add(drow);
-               // da.UpdateCommand = scb.GetUpdateCommand();
-               // dt.AcceptChanges();
+               
+                da.UpdateCommand = scb.GetUpdateCommand();
+               
                 da.Update(ds,"NorthwindRegion");
                 Console.WriteLine("--------------");
                 dt = ds.Tables["NorthwindRegion"];
