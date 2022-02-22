@@ -1,0 +1,88 @@
+Lambda Expression : input(implied/inferred)=>(expression)
+has two parts: 1. the left side is the input variable/object, and the right hand side will be the expression to evaluate
+
+List<Employee> emplist = new List<Employee>(){};
+eg: Employee emp=emplist.Find(e => e.ID==102)
+
+=> lambda expression also called as 'goes to' (arrow)
+Advantages of Linq:
+1. Familiar Lang: 
+2. Less Coding:
+3. ReadableCode:
+4. Standardized way of querying multiple datasource
+5. Compile Type safety: It provides datatype checking of objects at compile time
+6. Intellisense Support : 
+
+
+Linq to Arrays/Collections - (Linq to Objects)
+
+LINQ to SQL - Runtime infrastructure to access relation database object (referred to as Dlinq)
+LINQ to SQL - Objects can be generated alo with a tool called as SqlMetal (it is an exe file that requires command line statements to generate the dbml file)
+
+Linq to Entities:ORM
+
+SQL(ADO) --> SQL Server
+ 1. Runtime Checks the Syntax of Sql Statements
+ 2. Not Type Safe
+ 3. No Intellisense support
+ 4. Debugging of Sql statements not possible
+ 5. Code is a combination of OOP and Relational
+
+LINQ --->SQL server (Linq to Sql)
+ 1. Compile Time Syntax Checking
+ 2. Type Safe
+ 3. Intellisense Support
+ 4. Debugging of LINQ statements is possible
+ 5. Pure OO code.
+
+Tables 		---->  Classes
+Columns		 --->  Properties
+Rows   		 --->  Instances
+StoredProcedures --->  
+
+
+Entity Framework:EF is an object-Relational mapper. It is a toll that simplifies mapping between objects in your S/w(Appln.) to the tables and columns of a rdbms
+3 approaches to EF: 1. Database First : 
+                    2. Code First :
+                    3. Model First:
+
+1.Launch Visual Studio:
+2.Create a console Application
+3.Right Click on the Project in the solution explorer and add a new Item
+4.Select ADO.Net Entity Model from the list of items.
+   (Install EntityFramework6.x from Tools->NugetPackages->Manage NugetPackage for solutions option->go to browse->type Entity...(select EntityFramework6.x from the dropdown)->check the project and install. Agree for the terms and conditions)
+5.Step 4 will create a Model with a name Model1
+6.Click Add and select DatabaseFirst from the window and click next
+7.The DataConnection window Pops up. From this create a new connection or use an existing one. If new is selected, give the details of servername, authentication, database name and test the connection(thru the wizard). Observer the name that it creates for the connection as<databasename>followed by entities. Click OK
+8. Choose the latest version of EF.(Click Yes 3 times)
+9. Next window allows you to select the tables/views/sp/functions etc. Ensure 3 checkboxes below this window are checked. Click next
+10. Observe the edmx, modelTT, and all classes getting created. Check the model1.context.tt class to see the context 
+
+11. Create object of the Context class and start using LINQ or Programming Logic to do CRUD.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+E:\Banu\Zensar\Batch1\LINQ\LINQPrj\LINQPrj\bin\Debug\LINQPrj.exe.config
+E:\Banu\Zensar\Batch1\LINQ\LINQPrj\LINQPrj\bin\Debug\LINQPrj.exe
+E:\Banu\Zensar\Batch1\LINQ\LINQPrj\LINQPrj\bin\Debug\LINQPrj.pdb
+E:\Banu\Zensar\Batch1\LINQ\LINQPrj\LINQPrj\obj\Debug\LINQPrj.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\LINQ\LINQPrj\LINQPrj\obj\Debug\LINQPrj.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\LINQ\LINQPrj\LINQPrj\obj\Debug\LINQPrj.exe
+E:\Banu\Zensar\Batch1\LINQ\LINQPrj\LINQPrj\obj\Debug\LINQPrj.pdb

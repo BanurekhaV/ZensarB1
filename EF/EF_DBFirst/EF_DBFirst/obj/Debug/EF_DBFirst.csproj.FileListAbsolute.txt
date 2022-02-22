@@ -1,0 +1,12 @@
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\bin\Debug\EF_DBFirst.exe.config
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\bin\Debug\EF_DBFirst.exe
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\bin\Debug\EF_DBFirst.pdb
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\bin\Debug\EntityFramework.dll
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\bin\Debug\EntityFramework.SqlServer.dll
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\bin\Debug\EntityFramework.xml
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\bin\Debug\EntityFramework.SqlServer.xml
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\obj\Debug\EF_DBFirst.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\obj\Debug\EF_DBFirst.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\obj\Debug\EF_DBFirst.csproj.CopyComplete
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\obj\Debug\EF_DBFirst.exe
+E:\Banu\Zensar\Batch1\EF\EF_DBFirst\EF_DBFirst\obj\Debug\EF_DBFirst.pdb

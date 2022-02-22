@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Zensar">
+  <DataContextMoniker Name="/ZensarDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3d226c93-52df-410f-a8f8-5fb60f0a9a8b" absoluteBounds="4, 1.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/ZensarDataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9287593b-3e2b-45d7-9df7-ba2b40795c02" absoluteBounds="4.015, 2.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

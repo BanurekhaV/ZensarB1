@@ -1,0 +1,131 @@
+Connection Pooling:
+
+Connection object instead of being sent to garbage, we can pool it.
+
+Data Relations in datasets:
+
+XML : Extended/Extensible Markup Lang. (SGML- standard genearlized markup lang.)
+- xml tags are used to store and organize data, rather than specifying how to display the data like html.
+
+3 important characteristics feature sof XML
+
+ - XML is extensible - allows to create our own descriptive tags, or language
+ - XML carries the data and not the presentation aspects
+ - XML is a public standard(open source of W3 consortium)
+
+XMl works behind the screen. Used to exchange data between organizations or systems. can be used to store and arrange data(customization). Any type of data can be expressed as an xml document.
+DOM
+
+eg: 
+<mydata>
+  <text>Hello World</text> or <text hello world/>
+</mydata>
+
+
+Rules for XML document
+
+1. XML declaration :
+   <?xml version = "1.0" encoding="utf-8">
+decl is case sensitive
+
+2. XML tags and Elements
+   <element>.....</element>
+  <element/>
+3. Attributes:
+   attribue name and value(names are not in quotation but values are always in quotation)
+4. References:
+  &
+  #3e3e3e, #
+XML Text
+  < - &lt;
+ & - &amp;
+" - &quot; &nbsp;
+
+XML document definition can be validated either as a DTD or XSD
+
+DTD -: Document Type Definition
+<?xml version="1.0"?>
+<!DOCTYPE employee info "emp.dtd">
+<employee>
+   <firstname>Banu</firstname>
+   <lastname>Rekha</lastname>
+   <email>br@aa.com</email>
+</employee>
+
+
+XSD : Xml Schema Definition
+
+<?xml version="1.0"?>
+<employee
+xmlns="http://www.zensar.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.zensar.com employee.xsd">
+  <firstname>Banu</firstname>
+   <lastname>Rekha</lastname>
+   <email>br@aa.com</email>
+</employee>
+
+LINQ :Lang. Integrated Query: is a uniform query syntax to retrieve data from different sources and formats
+
+Linq to Arrays
+Linq to Objects
+Linq to Sql
+Linq to Entities
+
+Linq : Immediate Queries : Linq query gets executed at the place where defined and the output is kept ready
+       Deferred Queries : are linq queries that get executed whenever we want the output of the query
+
+There are 2 basic ways to write a Linq query
+ 1. Query Syntax / Query Expression : 
+from<range variable>in <IEnumerable<T> or IQueryable<T> collection>
+  <standard operators>or<lambda expressions>
+  <select or groupby operators>
+
+ 2. Method Syntax / fluent syntax / Method expressions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
