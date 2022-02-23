@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="NorthwindModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="NorthwindModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -171,6 +171,27 @@
           <Property Name="TerritoryDescription" Type="nchar" MaxLength="50" Nullable="false" />
           <Property Name="RegionID" Type="int" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Alphabetical list of products' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Alphabetical list of products">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Discontinued" />
+            <PropertyRef Name="CategoryName" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="SupplierID" Type="int" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="QuantityPerUnit" Type="nvarchar" MaxLength="20" />
+          <Property Name="UnitPrice" Type="money" />
+          <Property Name="UnitsInStock" Type="smallint" />
+          <Property Name="UnitsOnOrder" Type="smallint" />
+          <Property Name="ReorderLevel" Type="smallint" />
+          <Property Name="Discontinued" Type="bit" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="15" Nullable="false" />
+        </EntityType>
         <Association Name="FK_CustomerCustomerDemo">
           <End Role="CustomerDemographics" Type="Self.CustomerDemographics" Multiplicity="1" />
           <End Role="CustomerCustomerDemo" Type="Self.CustomerCustomerDemo" Multiplicity="*" />
@@ -327,6 +348,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="CustOrdersOrders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CustomerID" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="Ten_Most_Expensive_Products" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="Ten Most Expensive Products" />
         <EntityContainer Name="NorthwindModelStoreContainer">
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CustomerCustomerDemo" EntityType="Self.CustomerCustomerDemo" Schema="dbo" store:Type="Tables" />
@@ -342,6 +367,21 @@
           <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Territories" EntityType="Self.Territories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Alphabetical list of products" EntityType="Self.Alphabetical list of products" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Alphabetical list of products].[ProductID] AS [ProductID], 
+    [Alphabetical list of products].[ProductName] AS [ProductName], 
+    [Alphabetical list of products].[SupplierID] AS [SupplierID], 
+    [Alphabetical list of products].[CategoryID] AS [CategoryID], 
+    [Alphabetical list of products].[QuantityPerUnit] AS [QuantityPerUnit], 
+    [Alphabetical list of products].[UnitPrice] AS [UnitPrice], 
+    [Alphabetical list of products].[UnitsInStock] AS [UnitsInStock], 
+    [Alphabetical list of products].[UnitsOnOrder] AS [UnitsOnOrder], 
+    [Alphabetical list of products].[ReorderLevel] AS [ReorderLevel], 
+    [Alphabetical list of products].[Discontinued] AS [Discontinued], 
+    [Alphabetical list of products].[CategoryName] AS [CategoryName]
+    FROM [dbo].[Alphabetical list of products] AS [Alphabetical list of products]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_CustomerCustomerDemo" Association="Self.FK_CustomerCustomerDemo">
             <End Role="CustomerDemographics" EntitySet="CustomerDemographics" />
             <End Role="CustomerCustomerDemo" EntitySet="CustomerCustomerDemo" />
@@ -395,8 +435,7 @@
             <End Role="Territories" EntitySet="Territories" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="NorthwindModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -745,7 +784,41 @@
             <End Role="Employees" EntitySet="Employees" />
             <End Role="Territories" EntitySet="Territories" />
           </AssociationSet>
+          <FunctionImport Name="CustOrdersOrders" ReturnType="Collection(NorthwindModel.CustOrdersOrders_Result)">
+          <Parameter Name="CustomerID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Ten_Most_Expensive_Products" ReturnType="Collection(NorthwindModel.Ten_Most_Expensive_Products_Result)" />
+          <EntitySet Name="Alphabetical_list_of_products" EntityType="NorthwindModel.Alphabetical_list_of_product" />
         </EntityContainer>
+        <ComplexType Name="CustOrdersOrders_Result">
+          <Property Type="Int32" Name="OrderID" Nullable="false" />
+          <Property Type="DateTime" Name="OrderDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="RequiredDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ShippedDate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="Ten_Most_Expensive_Products_Result">
+          <Property Type="String" Name="TenMostExpensiveProducts" Nullable="false" MaxLength="40" />
+          <Property Type="Decimal" Name="UnitPrice" Nullable="true" Precision="19" />
+        </ComplexType>
+        <EntityType Name="Alphabetical_list_of_product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="Discontinued" />
+            <PropertyRef Name="CategoryName" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="SupplierID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="QuantityPerUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="UnitsInStock" Type="Int16" />
+          <Property Name="UnitsOnOrder" Type="Int16" />
+          <Property Name="ReorderLevel" Type="Int16" />
+          <Property Name="Discontinued" Type="Boolean" Nullable="false" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -929,6 +1002,41 @@
               <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
             </EndProperty>
           </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="CustOrdersOrders" FunctionName="NorthwindModel.Store.CustOrdersOrders">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NorthwindModel.CustOrdersOrders_Result">
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="RequiredDate" ColumnName="RequiredDate" />
+                <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Ten_Most_Expensive_Products" FunctionName="NorthwindModel.Store.Ten_Most_Expensive_Products">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NorthwindModel.Ten_Most_Expensive_Products_Result">
+                <ScalarProperty Name="TenMostExpensiveProducts" ColumnName="TenMostExpensiveProducts" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Alphabetical_list_of_products">
+            <EntityTypeMapping TypeName="NorthwindModel.Alphabetical_list_of_product">
+              <MappingFragment StoreEntitySet="Alphabetical list of products">
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Discontinued" ColumnName="Discontinued" />
+                <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
+                <ScalarProperty Name="UnitsOnOrder" ColumnName="UnitsOnOrder" />
+                <ScalarProperty Name="UnitsInStock" ColumnName="UnitsInStock" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="QuantityPerUnit" ColumnName="QuantityPerUnit" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

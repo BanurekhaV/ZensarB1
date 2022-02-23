@@ -166,6 +166,27 @@
     <Property Name="TerritoryDescription" Type="nchar" MaxLength="50" Nullable="false" />
     <Property Name="RegionID" Type="int" Nullable="false" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Alphabetical list of products' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Alphabetical list of products">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="Discontinued" />
+      <PropertyRef Name="CategoryName" />
+    </Key>
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="QuantityPerUnit" Type="nvarchar" MaxLength="20" />
+    <Property Name="UnitPrice" Type="money" />
+    <Property Name="UnitsInStock" Type="smallint" />
+    <Property Name="UnitsOnOrder" Type="smallint" />
+    <Property Name="ReorderLevel" Type="smallint" />
+    <Property Name="Discontinued" Type="bit" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
   <Association Name="FK_CustomerCustomerDemo">
     <End Role="CustomerDemographics" Type="Self.CustomerDemographics" Multiplicity="1" />
     <End Role="CustomerCustomerDemo" Type="Self.CustomerCustomerDemo" Multiplicity="*" />
@@ -322,6 +343,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="CustOrdersOrders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CustomerID" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="Ten_Most_Expensive_Products" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="Ten Most Expensive Products" />
   <EntityContainer Name="NorthwindModelStoreContainer">
     <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CustomerCustomerDemo" EntityType="Self.CustomerCustomerDemo" Schema="dbo" store:Type="Tables" />
@@ -337,6 +362,21 @@
     <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Territories" EntityType="Self.Territories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Alphabetical list of products" EntityType="Self.Alphabetical list of products" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Alphabetical list of products].[ProductID] AS [ProductID], 
+    [Alphabetical list of products].[ProductName] AS [ProductName], 
+    [Alphabetical list of products].[SupplierID] AS [SupplierID], 
+    [Alphabetical list of products].[CategoryID] AS [CategoryID], 
+    [Alphabetical list of products].[QuantityPerUnit] AS [QuantityPerUnit], 
+    [Alphabetical list of products].[UnitPrice] AS [UnitPrice], 
+    [Alphabetical list of products].[UnitsInStock] AS [UnitsInStock], 
+    [Alphabetical list of products].[UnitsOnOrder] AS [UnitsOnOrder], 
+    [Alphabetical list of products].[ReorderLevel] AS [ReorderLevel], 
+    [Alphabetical list of products].[Discontinued] AS [Discontinued], 
+    [Alphabetical list of products].[CategoryName] AS [CategoryName]
+    FROM [dbo].[Alphabetical list of products] AS [Alphabetical list of products]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_CustomerCustomerDemo" Association="Self.FK_CustomerCustomerDemo">
       <End Role="CustomerDemographics" EntitySet="CustomerDemographics" />
       <End Role="CustomerCustomerDemo" EntitySet="CustomerCustomerDemo" />

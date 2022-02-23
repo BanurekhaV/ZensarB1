@@ -28,6 +28,7 @@
         <AssociationConnector Association="NorthwindModel.FK_Territories_Region" ManuallyRouted="false" />
         <AssociationConnector Association="NorthwindModel.CustomerCustomerDemo" ManuallyRouted="false" />
         <AssociationConnector Association="NorthwindModel.EmployeeTerritories" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="NorthwindModel.Alphabetical_list_of_product" Width="1.5" PointX="10.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

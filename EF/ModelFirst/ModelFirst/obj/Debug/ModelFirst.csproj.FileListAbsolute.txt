@@ -1,0 +1,12 @@
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\bin\Debug\ModelFirst.exe.config
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\bin\Debug\ModelFirst.exe
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\bin\Debug\ModelFirst.pdb
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\bin\Debug\EntityFramework.dll
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\bin\Debug\EntityFramework.SqlServer.dll
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\bin\Debug\EntityFramework.xml
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\bin\Debug\EntityFramework.SqlServer.xml
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\obj\Debug\ModelFirst.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\obj\Debug\ModelFirst.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\obj\Debug\ModelFirst.csproj.CopyComplete
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\obj\Debug\ModelFirst.exe
+E:\Banu\Zensar\Batch1\EF\ModelFirst\ModelFirst\obj\Debug\ModelFirst.pdb

@@ -12,6 +12,8 @@ namespace EF_DBFirst
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class NorthwindEntities : DbContext
     {
@@ -37,5 +39,20 @@ namespace EF_DBFirst
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Territory> Territories { get; set; }
+        public virtual DbSet<Alphabetical_list_of_product> Alphabetical_list_of_products { get; set; }
+    
+        public virtual ObjectResult<CustOrdersOrders_Result> CustOrdersOrders(string customerID)
+        {
+            var customerIDParameter = customerID != null ?
+                new ObjectParameter("CustomerID", customerID) :
+                new ObjectParameter("CustomerID", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<CustOrdersOrders_Result>("CustOrdersOrders", customerIDParameter);
+        }
+    
+        public virtual ObjectResult<Ten_Most_Expensive_Products_Result> Ten_Most_Expensive_Products()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Ten_Most_Expensive_Products_Result>("Ten_Most_Expensive_Products");
+        }
     }
 }

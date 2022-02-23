@@ -8,6 +8,16 @@
       <Column Name="Gender" Type="System.String" DbType="Char(7)" CanBeNull="true" />
       <Column Name="Salary" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Dept" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Department_Employee" Member="Department" ThisKey="Dept" OtherKey="DeptId" Type="Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Department" Member="Departments">
+    <Type Name="Department">
+      <Column Name="DeptId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DeptName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Budget" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Loc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Department_Employee" Member="Employees" ThisKey="DeptId" OtherKey="Dept" Type="Employee" />
     </Type>
   </Table>
 </Database>

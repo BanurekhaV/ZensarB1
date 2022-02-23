@@ -345,5 +345,39 @@
       <End Role="Employees" EntitySet="Employees" />
       <End Role="Territories" EntitySet="Territories" />
     </AssociationSet>
+    <FunctionImport Name="CustOrdersOrders" ReturnType="Collection(NorthwindModel.CustOrdersOrders_Result)">
+      <Parameter Name="CustomerID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Ten_Most_Expensive_Products" ReturnType="Collection(NorthwindModel.Ten_Most_Expensive_Products_Result)" />
+    <EntitySet Name="Alphabetical_list_of_products" EntityType="NorthwindModel.Alphabetical_list_of_product" />
   </EntityContainer>
+  <ComplexType Name="CustOrdersOrders_Result">
+    <Property Type="Int32" Name="OrderID" Nullable="false" />
+    <Property Type="DateTime" Name="OrderDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="RequiredDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ShippedDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Ten_Most_Expensive_Products_Result">
+    <Property Type="String" Name="TenMostExpensiveProducts" Nullable="false" MaxLength="40" />
+    <Property Type="Decimal" Name="UnitPrice" Nullable="true" Precision="19" />
+  </ComplexType>
+  <EntityType Name="Alphabetical_list_of_product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="Discontinued" />
+      <PropertyRef Name="CategoryName" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="QuantityPerUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UnitsInStock" Type="Int16" />
+    <Property Name="UnitsOnOrder" Type="Int16" />
+    <Property Name="ReorderLevel" Type="Int16" />
+    <Property Name="Discontinued" Type="Boolean" Nullable="false" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

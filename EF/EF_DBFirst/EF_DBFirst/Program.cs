@@ -37,6 +37,15 @@ namespace EF_DBFirst
                     Console.WriteLine(item.RegionID + " "+ item.RegionDescription);
                 }
             }
+            else
+            {
+                var plist = ne.Ten_Most_Expensive_Products();
+                foreach(var item in plist)
+                {
+                    Console.WriteLine(item.TenMostExpensiveProducts + " "+item.UnitPrice);
+                }
+            }
+                
             Console.Read();
         }
     }
