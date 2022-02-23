@@ -15,7 +15,17 @@ namespace ModelFirst
                         orderby p.Price descending
                         select p;
 
+            var newprod = (from product in mc.Products
+                           where product.Prodname == "Markers"
+                           select product).SingleOrDefault();
+            newprod.Prodname = "Pencil Pouch";
+            mc.SaveChanges();
 
+            var delprod = (from d in mc.Products
+                           where d.Pid == 2
+                           select d).Single();
+            mc.Products.Remove(delprod);
+            mc.SaveChanges();
 
             foreach(var s in prods)
             {

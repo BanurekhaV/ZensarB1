@@ -14,9 +14,18 @@ namespace ModelFirst
     
     public partial class Product
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Product()
+        {
+            this.Sales = new HashSet<Sales>();
+        }
+    
         public int Pid { get; set; }
         public string Prodname { get; set; }
-        public string Price { get; set; }
-        public string QOH { get; set; }
+        public float Price { get; set; }
+        public int QOH { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Sales> Sales { get; set; }
     }
 }

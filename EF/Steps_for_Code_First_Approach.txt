@@ -1,0 +1,35 @@
+from the PM console  : type install-package EntityFramework
+
+
+
+Code-First Approach:
+
+1. Create a console Application
+2. Install Entity Framework from Nuget Package Manager for Solutions
+3. Add model classes -(maybe in a Model Folder)-optional
+4. Add a ContextClass that inherits from the DbContext
+    (include namespace System.Data.Entity)
+5. Include a DbSet<modelclassname> <objectname>{get;set;}
+6. Add a constructor to the ContextClass as below:
+   if contextclass name is MyContext then
+   public MyContext():base("name=<contextname>"){}
+                                  ------------
+7. In the Appconfig file add the connectionstring details under the Configuration element and after the </configSection> as below:
+  <connectionStrings>
+      <add name="<Contextname>"
+                  -----------
+           connectionString="Data Source=.;Initial Catalog=<tobe created Databasename>;integrated security=true"
+           providerName="System.Data.SqlClient"/>
+    </connectionStrings> 
+8. Build the application
+
+9. Invoke a PM console from the tools menu
+PM>enable-migrations -EnableAutomaticMigrations:$true
+10. Once the above command executes successfully, you should see a Migration folder getting created in the solution explorer. Under this folder you will have configurations.cs 
+
+11. Check that the database with the given name under Initial Catalog is created in the Database server.
+
+12. After this any changes you make to the Model classes (viz. adding a new class or property etc..,) you should reflect the changes to the database by giving the below 2 command in the PM console
+ 1. add-migration "<some meaningful name to indicate the changes">(This will take some time and creates a .cs file with a UID, and 2 methods called as Up() and Down())
+2. update-database -verbose   (This step will update the database with all the changes done through the application)
+ 

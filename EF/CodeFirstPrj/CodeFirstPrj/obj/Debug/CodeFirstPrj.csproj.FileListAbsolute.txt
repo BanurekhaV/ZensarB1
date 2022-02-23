@@ -1,0 +1,14 @@
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\bin\Debug\CodeFirstPrj.exe.config
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\bin\Debug\CodeFirstPrj.exe
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\bin\Debug\CodeFirstPrj.pdb
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\bin\Debug\EntityFramework.dll
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\bin\Debug\EntityFramework.SqlServer.dll
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\bin\Debug\EntityFramework.xml
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\bin\Debug\EntityFramework.SqlServer.xml
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\obj\Debug\CodeFirstPrj.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\obj\Debug\CodeFirstPrj.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\obj\Debug\CodeFirstPrj.csproj.CopyComplete
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\obj\Debug\CodeFirstPrj.exe
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\obj\Debug\CodeFirstPrj.pdb
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\obj\Debug\CodeFirstPrj.Migrations.publisher.resources
+E:\Banu\Zensar\Batch1\EF\CodeFirstPrj\CodeFirstPrj\obj\Debug\CodeFirstPrj.csproj.GenerateResource.cache

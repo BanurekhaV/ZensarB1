@@ -2,6 +2,11 @@
 <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="Model1StoreContainer">
     <EntitySet Name="Products" EntityType="Model1.Store.Products" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sales" EntityType="Model1.Store.Sales" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ProductSales" Association="Model1.Store.ProductSales">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Sales" EntitySet="Sales" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Products">
     <Key>
@@ -9,7 +14,29 @@
     </Key>
     <Property Name="Pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Prodname" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="QOH" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="real" Nullable="false" />
+    <Property Name="QOH" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="SaleID" />
+    </Key>
+    <Property Name="SaleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrdId" Type="int" Nullable="false" />
+    <Property Name="QtySold" Type="int" Nullable="false" />
+    <Property Name="Discount" Type="real" Nullable="false" />
+    <Property Name="ProductPid" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ProductSales">
+    <End Role="Product" Type="Model1.Store.Products" Multiplicity="1" />
+    <End Role="Sales" Type="Model1.Store.Sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Pid" />
+      </Principal>
+      <Dependent Role="Sales">
+        <PropertyRef Name="ProductPid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -2,6 +2,11 @@
 <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
   <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Products" EntityType="Model1.Product" />
+    <EntitySet Name="Sales" EntityType="Model1.Sales" />
+    <AssociationSet Name="ProductSales" Association="Model1.ProductSales">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Sales" EntitySet="Sales" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Product">
     <Key>
@@ -9,7 +14,31 @@
     </Key>
     <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Prodname" Type="String" Nullable="false" />
-    <Property Name="Price" Type="String" Nullable="false" />
-    <Property Name="QOH" Type="String" Nullable="false" />
+    <Property Name="Price" Type="Single" Nullable="false" />
+    <Property Name="QOH" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Sales" Relationship="Model1.ProductSales" FromRole="Product" ToRole="Sales" />
   </EntityType>
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="SaleID" />
+    </Key>
+    <Property Name="SaleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PrdId" Type="Int32" Nullable="false" />
+    <Property Name="QtySold" Type="Int32" Nullable="false" />
+    <Property Name="Discount" Type="Single" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Model1.ProductSales" FromRole="Sales" ToRole="Product" />
+    <Property Name="ProductPid" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="ProductSales">
+    <End Type="Model1.Product" Role="Product" Multiplicity="1" />
+    <End Type="Model1.Sales" Role="Sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Pid" />
+      </Principal>
+      <Dependent Role="Sales">
+        <PropertyRef Name="ProductPid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

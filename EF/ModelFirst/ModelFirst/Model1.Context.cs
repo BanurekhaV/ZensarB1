@@ -26,5 +26,6 @@ namespace ModelFirst
         }
     
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Sales> Sales { get; set; }
     }
 }

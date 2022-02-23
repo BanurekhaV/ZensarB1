@@ -11,5 +11,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Sales)">
+        <MappingFragment StoreEntitySet="Sales">
+          <ScalarProperty Name="SaleID" ColumnName="SaleID" />
+          <ScalarProperty Name="PrdId" ColumnName="PrdId" />
+          <ScalarProperty Name="QtySold" ColumnName="QtySold" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="ProductPid" ColumnName="ProductPid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
