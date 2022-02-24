@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<body>
+    <h1><centre>Registration Form</centre></h1>
+    <form action="Regn.html">
+      Fisrt Name  : &nbsp;&nbsp;
+      <input type="text" name="txtfname"><br/>
+      Last Name :
+      <input type="text" name="txtlname"><br/>
+      Age  :&nbsp;&nbsp;&nbsp
+      <input type="number" name="age"><br/>
+      Password  :&nbsp;&nbsp;
+      <input type="password" name="psswd"><br/>
+      Address :
+      <textarea rows="4" cols="30"></textarea><br/><br/>
+      Gender  :&nbsp;
+      <input type="radio" name="gender" value="m" checked>Male
+      <input type="radio" name="gender" value="f">Female
+      <input type="radio" name="gender" value="o">Others <br/><br/>
+      City :
+      <select name="city">
+          <option value="ahmedabad">Ahmedabad</option>
+          <option value="blore">Bangalore</option>
+          <option value="chn">Chennai</option>
+          <option value="del">Delhi</option>
+          <option value="hyd">Hyderabad</option>
+      </select><br/>
+      Select ID Proof:
+      <input type="checkbox" name="c1" value="acard">Adhar Card<br/>
+      <input type="checkbox" name="c2" value="pcard">PanCard <br/>
+      <input type="checkbox" name="c3" value="dl">Driving License<br/><br/><br/>
+      Upload Proof:
+      <input type="file"><br/>
+      <input type="submit" value="Register">
+      <input type="reset" value="Clear">
+    </form>
+</body>
