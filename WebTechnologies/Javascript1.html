@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--Eg. 1<body>
+    <h2>Lets us See what Java script can do</h2>
+    <p id="num">JavaScript can change HTML Document</p>
+    <p id="str">Name :</p>
+    <p id="obj">Object Info :</p>
+    <script>
+        var length=10;
+        var name="Abdul Kalam";
+        var ob={firstname:"Ramakrishna",lastname:"Paramahamsa"};
+        document.getElementById("num").innerHTML=length;
+        document.getElementById("str").innerHTML=name;
+        document.getElementById("obj").innerHTML=ob.firstname + " "+ob.lastname;
+    </script>
+    <button type="button" onclick="document.getElementById('num').innerHTML=length">Click Me forNumber</button>
+    <br/><br/>
+    <button type="button" onclick="document.getElementById('num').innerHTML=name">Click Me for String</button>
+    <br/><br/>
+    <button type="button" onclick="document.getElementById('num').innerHTML=ob.firstname + ob.lastname">Click Me for Object</button>
+    <br/><br/>
+</body>-->
+<!--Eg. 2 Example on user input
+<body>
+    <input id="userinput" size="40">
+    <button onclick="userSubmit()">Submit</button>
+    <br/>
+    <div id="result"></div>
+    
+    <script type="text/javascript">
+        function userSubmit(){
+            var UI=document.getElementById('userinput').value;
+            document.getElementById('result').innerHTML='You typed :' + UI;
+        }
+    </script>
+</body>
+Eg. 3
+<body>
+ <div id="feedback"></div>
+ <script>
+     document.getElementById('feedback').innerHTML='<p><font color=blue>Hello World</font></p>';
+ </script>
+</body>-->
+
+<!--Eg 4.
+<head>
+    <script type="text/javascript">
+        function sayHello(){
+            alert("Hi There !!")
+            document.write("Hello All!");
+            console.log("This is the console");
+        }
+    </script>
+</head>
+<body>
+    <p>Click the below button to invoke the function</p>
+    <form>
+        <input type="button" onclick="sayHello()" value="Say Hello">
+    </form>
+    <p>Use Different text and try it out</p>
+</body>
+
+example with elementsBy Tag Name
+<body>
+    <script>
+        function change(){
+            var paragraphs = document.getElementsByTagName('h4');
+            document.getElementById('output').innerHTML=paragraphs[2].innerHTML;
+            alert("changed");
+            //document.write("Original Changed");
+        }
+    </script>
+    <p id="output">This is Javascript GetElements By Tag Name</p>
+    <p>Para2</p>
+    <p>Para 3</p>
+    <h4>Heading 4</h4>
+    <h4 id="datachange">one more Heading 4</h4>
+    <h4>Value Changed</h4>
+    <button onclick="change()">Click to Change Value</button>
+</body>-->
+<body>
+    <h1>Date Functions</h1>
+    <p id="demo"> </p>
+    <script>
+        var cd=new Date();
+        cd.setDate(cd.getDate()+350);
+        document.getElementById('demo').innerHTML=cd;
+    </script>
+</body>

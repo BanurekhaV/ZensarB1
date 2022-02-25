@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<style>
+    div{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+      animation-name: example;
+      animation-duration: 4s;
+      /*-webkit-animation-name:example  for safari browsers;
+      -webkit-animation-duration: 4s;*/
+    }
+    @keyframes example{
+    0% {
+        background-color:red;
+    }
+    25% {
+        background-color: yellow;
+        left:200px;
+        top:0px;
+    }
+    50%{
+        background-color: blue;
+        left: 200px;
+        top:200px;
+    }
+    100%{
+        background-color: green;
+    }
+}
+</style>
+</head>
+<body>
+    <div>Roll</div>
+</body>

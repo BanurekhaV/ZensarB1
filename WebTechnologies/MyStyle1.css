@@ -1,0 +1,12 @@
+div{
+    background-color: aqua;
+    height: 300px;
+    width: 300px;
+}
+#Myid{
+    color:blue;
+
+}
+.Myclass{
+    color:green;
+}

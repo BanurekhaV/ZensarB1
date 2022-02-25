@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--example for internal styles-->
+ <!--1. Tag Selectors
+     2. ID Selectors
+     3. Class Selectors-->
+<head>
+<style>
+   h1{
+       background-color: aliceblue;
+       height: 150pt;
+       width: 150pt;
+       color:green;
+       border:2px solid rgb(255, 0, 0);
+   }
+   #pop{
+       background-color: orangered;
+       padding: 1em;
+   }
+   #top {
+       background-color: lightsalmon;
+       padding: 4px;
+       color:blue;
+   }
+   #pop p{
+       color: powderblue;
+       font-weight: lighter;
+   }
+   #pop h2{
+       color:fuchsia;
+   }
+   p{
+       color:royalblue;
+       font: 1.5em;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       padding: 3em 1em;
+       border: 1px black solid;
+       border-width: 5px 10px 5px 10px;
+       border-color: red green blue yellow;
+       margin: 1em 5em;
+   }
+   .myclass{
+       color:green;
+       font-weight: bold;
+   }
+
+</style>    
+</head>
+<body>
+    <div id="top">
+        <h1>Vegetable Salads</h1>
+        <p class="myclass">Salads are very healthy with lots of veggies</p>
+        <p class="myclass">This is yumm tooo..</p>
+        <p>This is just a test para</p>
+        </div>
+        <div id="pop">
+         <h2 id="top">Fruit Salads</h2>
+         <div id="pop">
+            <p id="top">This is Yummy!!</p>
+            <p id="top">this is me</p>
+         </div>
+         
+        </div>
+</body>

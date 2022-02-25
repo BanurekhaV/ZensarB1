@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript">
+     function formValidator(){
+         //make references to the form fields
+         var fname=document.getElementById('fname');
+         var addr=document.getElementById('addr');
+         var zip=document.getElementById('zip');
+         var state=document.getElementById('state');
+         var username= document.getElementById('username');
+         var email=document.getElementById('email');
+
+         //check each input in the order that it appears in the form
+         if(isAlphabet(fname,"Please enter only letters for your name")){
+             if(isAlphanumeric(addr,"Please enter numbers and Letters ")){
+                 if(isNumeric(zip,"Please enter a Valid Zip code")){
+                     if(madeSelection(state,"Please Choose a State")){
+                         if(lengthRestrict(username,6,8)){
+                             if(emailValidation(email,"Please enter a valid email format")){
+                                 return true;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+           return false;
+     }
+     function isNumeric(elem, helpmsg){
+         var numexpr=/^[0-9]+$/;
+         if(elem.value.match(numexpr)){
+             return true;
+         }
+         else
+         {
+             alert(helpmsg);
+             elem.focus();
+             return false;
+         }
+     }
+
+     function isAlphabet(elem,helpmsg){
+         var alphaexpr=/^[a-zA-Z]+$/;
+         if(elem.value.match(alphaexpr)){
+             return true;
+         }
+         else
+         {
+             alert(helpmsg);
+             elem.focus();
+             return false;
+         }
+     }
+function isAlphanumeric(elem,helpmsg){
+    var alphanum=/^[0-9a-zA-Z]+$/;
+    if(elem.value.match(alphanum)){
+             return true;
+         }
+         else
+         {
+             alert(helpmsg);
+             elem.focus();
+             return false;
+         }
+}
+
+function lengthRestrict(elem,min,max){
+    var uinput=elem.value;
+    if(uinput.length >=min && uinput.length <=max){
+        return true;
+            }
+            else
+            {
+                alert("Please enter values between"+ " "+ min +'and' + " "+ max +"characters ");
+                elem.focus();
+                return false;
+            }
+}
+function madeSelection(elem, helpmsg){
+    if(elem.value=="Please Choose"){
+        alert(helpmsg);
+        elem.focus();
+        return false;}
+        else{
+          return true;
+        }
+    }
+
+ function emailValidation(elem, helpmsg){
+     var emailexp=/^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-Z0-9]{2,4}$/;
+     if(elem.value.match(emailexp))
+     {
+         return true;
+     }
+     else{
+         alert(helpmsg);
+         elem.focus();
+         return false;
+     }
+ }
+        </script>
+        
+</head>
+<body>
+    <form onsubmit="return formValidator()">
+    First Name : <input type="text" id="fname"/><br/>
+    Address : <input type="text" id="addr"/><br/>
+    Zip Code: <input type="text" id="zip"/><br/>
+    state : <select id="state">
+        <option>Please Choose</option>
+        <option>Andhra</option>
+        <option>Telangana</option>
+        <option>Maharashtra</option>
+        <option>UP</option>
+        <option>WB</option>
+    </select> <br/>
+    User Name : <input type="text" id="username"/><br/>
+    Email : <input type="text" id="email"/><br/>
+    <input type="submit" value="Validate Form"/>
+
+    </form>
+</body>

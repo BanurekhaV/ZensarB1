@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--function with parameter
+<head>
+    <script type="text/javascript">
+        function wishing(name,age){
+            document.write(name +" "+ "is" + age +" "+ "years Old.");
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="wishing('Sumi',15)" value="Say hello">
+</body>-->
+
+<!-- function with return type
+<head>
+    <script>
+        function concat(first,last){
+            var full;
+            full = first + last;
+            return full;
+        }
+
+        function caller(){
+            var result;
+            result=concat('Namitha', 'Paul');
+            document.getElementById('show').innerText=result;
+            alert("The concatenated text is " + "" +result);
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="button" ondblclick="caller()" value="Function Invoke">
+  <p id="show">Name of the Employee</p>
+</body>-->
+
+<!-- Loops -->
+<body>
+    <p>Say What ?</p>
+    <input id="sayThis" size="40">
+    <p>How many Times ?</p>
+    <select id="howmany">
+        <option value="1">1</option>
+        <option value="5" selected>5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select>
+    <p><button onclick="doLoop()">Do It !</button></p>
+    <div id="results"></div>
+
+    <script>
+        function doLoop(){
+            var saywhat = document.getElementById('sayThis').value;
+            var maxtimes = document.getElementById('howmany').value;
+            var str= '';
+            for(var i=1;(i<=maxtimes); i++){
+                str = str+i +':'+ '' + saywhat + '<br/>';
+            }
+            document.getElementById('results').innerHTML=str;
+        }
+    </script>
+</body>
