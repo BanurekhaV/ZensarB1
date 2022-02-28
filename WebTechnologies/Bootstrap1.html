@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<title>First Bootstrap</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width; initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!--Jquery Library-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+    .gridstyle{
+        margin: 10px;
+        min-height: 300px;
+        background-color: aqua;
+        text-align: center;
+        font-size: large;
+    }
+</style>
+</head>
+<body>
+    <!--Grid System-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-4 ">
+                <div class="gridstyle">Left Side</div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+            <div class="gridstyle">Middle</div>
+        </div>
+        <div class="col-md-1 col-lg-2">
+            <div class="gridstyle">Middle</div>
+    </div>
+    <div class="col-md-1 col-lg-3">
+            <div class="gridstyle">Right Side</div>
+        </div>
+    </div>
+</div>
+<h2>Alerts</h2>
+  <div class="alert alert-success"><strong>Success</strong>This alert is for Success</div>
+  <div class="alert alert-warning"><strong>Warning</strong>This alert is for Warning</div>
+  <div class="alert alert-info"><strong>Info</strong>This alert is for Info</div>
+  <div class="alert alert-danger"><strong>Danger</strong>This alert is for Danger</div>
+</body>

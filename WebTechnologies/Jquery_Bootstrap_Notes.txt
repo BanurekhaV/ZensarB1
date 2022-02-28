@@ -1,0 +1,105 @@
+BootStrap: Free front end framework for easier and faster development of web UI. It includes design templates for HTML and CSS. Helps to create responsive designs
+
+August 2011, bootstrap was released on Github as open source by Mark Otto and Jacob 
+
+Where to get Bootstrap from? 
+ 1. Download it from getbootstrap.com
+ 2. Include it from CDNs
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/boostrap.min.css">
+<!--Jquery Library-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+Grid System: Bootstrap follows a grid system for responsive web designing
+ lg large device
+ md -medium device
+ sm - small device
+ xs - extra small
+
+HTML 5 in forms email
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+Containers : 2 containers to choose from in order to wrap site contents
+1. .container class provides a responsive fixed width container
+2. .containe-fluid class provides a full width container, spanning the entire width of the viewport
+
+
+JQuery: JavascriptLibrary
+Is a light weight library(write less, do more)
+Your website can be made with lot of ease to use Javascript functions
+ Features of JQuery:
+ 1. HTML/DOM manipulation
+ 2. HTML events method
+ 3. Animations and Effects
+ 4. AJAX calls
+ 5. Utilities
+
+How to add Jquery library to web pages
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+
+   or
+<script src="https://ajax.aspnetcdn.com/ajax/JQuery/jquery-3.4.1.min.js"></script>
+
+Jquery syntax is custom-made(tailor-made) for selecting HTML elements and to perform some action
+
+basic syantax: $(selector).action()
+$- sign is to define/access Jquery
+selector - to query or find a HTML element
+action - query action to be performed
+
+eg: $(document).ready(function()){}
+The above statement is to prevent any jquery code from running before the document is completed loading (for eg : you are trying to hide a paragraph element before the loading of the paragraph)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

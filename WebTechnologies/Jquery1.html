@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--first jquery page-->
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+               $("h1").hide();
+            });
+            $("#btn2").click(function(){
+                $("h1").show();
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>Jquery Heading 1</h1>
+    <button id="btn1">Hide</button>
+    <button id="btn2">Show</button>
+</body>
