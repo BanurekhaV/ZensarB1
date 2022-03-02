@@ -1,0 +1,28 @@
+JSON: JavaScript Object Notation
+It is a format for structuring data. 
+It is a simple text based format and is independent
+It is easy to understand
+It is light weight
+It supports data structures like arrays, objects
+It executes faster on the server, than xml.
+It is enclosed within {}
+It works on a Key/Value pair (keys are strings)
+
+{   
+   "Courses":[
+               {
+                 "Name": "CSharp",
+                 "Duration":"40 hrs",
+                 "fees":8000
+               }],
+   "CourseProvide":"Zensar"
+}
+Disadvantage : No error handling
+               No Security
+
+DataTypes supported by Json: string,number,object,arrays,boolean,null
+
+Not supported Datatypes: a function, date, undefined
+
+{ "employee":{"name":"Banurekha","city":"Chennai","salary":56000,"dept":null,"isactive":true} }
+
