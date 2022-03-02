@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<body>
+    <h2>Parsing using JSon.parse()</h2>
+    <p id="test">        
+    </p>
+    <!--<script>
+       /* parsing to objects
+       const mydata='{"name":"banurekha","city":"Chennai","salary":45000}'
+        const myobj=JSON.parse(mydata);
+        document.getElementById("test").innerHTML=myobj.name+ " ,"+myobj.city+" ,"+myobj.salary;*/
+        //parsing to Arrays
+       /* const mydata='{"name":"banurekha","city":["Agra","Chennai","Bangalore","Mumbai"],"salary":45000}'
+        const myarr=JSON.parse(mydata);
+        myvar=myarr["city"]
+        document.getElementById("test").innerHTML=myarr.city[0];
+        //document.getElementById("test").innerHTML=myvar[0];*/
+
+        //Stringify 1
+       /* var myvar={"Empid":5645,"name":"Walker"};
+        data=JSON.stringify(myvar);
+        document.write("Type of Data is " + typeof data +'<br/>');
+        document.write(data);*/
+
+        //stringify 2
+       
+
+    </script>-->
+    <h1>Using Replacer in stringify</h1>
+    <script>
+        var obj={"name":"Aasha","age":25,"city":"pune"};
+        var text=JSON.stringify(obj,function(key, value){
+            if(key=="name"){
+                return value.toUpperCase();
+            }
+            else {
+                return value;
+            }
+        });
+        document.getElementById("test").innerHTML=text;
+    </script>
+
+</body>
+</html>

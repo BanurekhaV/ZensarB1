@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#data").load("Regn.html");
+            });
+        });
+    </script>
+    <body>
+        <button>Load Html File</button>
+        <br/><br/>
+        <p>Hello Para</p>
+        <div id="data">
+        </div>
+    </body>

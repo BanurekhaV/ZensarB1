@@ -3,18 +3,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--first jquery page-->
     <script>
-        $(document).ready(function(){
+     /*   $(document).ready(function(){
             $("#btn1").click(function(){
+                $("p").prepend("Newly added Paragraph");
                $("h1").hide();
             });
             $("#btn2").click(function(){
                 $("h1").show();
+                $("ol").append("<li>New Item to the List</li>")
             })
+        });*/
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                if($("#txtname").val==" ")
+                  console.log($("input").val);
+                    $("#divmsg").html("name cannot be blank");
+                alert("HTML :" + $("#divmsg").html());
+                
+            });
         });
     </script>
 </head>
 <body>
     <h1>Jquery Heading 1</h1>
+    <p>JQuery Selectors</p>
+    <ol>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ol>
+    <input type="text" placeholder="Name" id ="txtname">
     <button id="btn1">Hide</button>
     <button id="btn2">Show</button>
+    <br/>
+    <div id="divmsg">Here goes the validation</div>
 </body>

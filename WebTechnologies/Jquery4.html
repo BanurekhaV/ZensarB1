@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+     $(document).ready(function(){
+         $("div").bind('click',function(event){
+             alert("Hi There!" + event.target.innerHTML);
+             alert("The Event Type :" + event.type);
+             $("button").click(function(){
+                 $("div").unbind('click');
+             });
+         });
+     });
+
+    </script>
+    <style>
+        .div{
+            margin: 10px;padding: 12px;border: 2px solid greenyellow;width: 60px;
+        }
+    </style>
+    </head>
+   <body>
+       <p>Click on the div's below :</p>
+       <div class="div" style="background-color:red">First Div Element</div>
+       <div class="div" style="background-color:green">Second Div Element</div>
+       <div class="div" style="background-color:blue">Third Div Element</div>
+   </body>

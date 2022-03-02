@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Animation--> 
+    <style>
+        p{
+            width: 200px;
+            padding: 40px 0px;
+            font:bold 24px sans-serif;
+            text-align: center;
+            background-color: aquamarine;
+            border:1px solid greenyellow;
+            box-sizing: content-box;
+        }
+    </style>
+    <script>
+       $(document).ready(function(){
+           $(" .start").click(function(){
+               $("p").animate({width:"100%"}).animate({fontSize:"46px"}).animate({borderWidth:"30"});
+           });
+           $(" .reset").click(function(){
+               $("p").removeAttr("style")
+           });
+       });
+
+        </script>
+        </head>
+        <body>
+            <p>Hello All !</p>
+            <button class="start">Start Animation</button>
+            <button class="reset">Reset</button>
+        </body>
