@@ -17,5 +17,10 @@ namespace Day1WebFormPrj
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        void Application_End()
+        {
+            Response.Write("Bye");
+        }
     }
 }
