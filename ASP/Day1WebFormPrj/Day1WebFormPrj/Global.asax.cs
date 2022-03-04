@@ -18,9 +18,6 @@ namespace Day1WebFormPrj
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        void Application_End()
-        {
-            Response.Write("Bye");
-        }
+        
     }
 }

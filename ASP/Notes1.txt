@@ -1,0 +1,55 @@
+First Time Request - Get 
+
+The same page when being requested again, it will be a Postback Event
+
+ViewState : is a dictionary object that is available fo all server side controls, which can maintain the state of the values and restore them back in the event of multiple postbacks of the same page
+
+In other word viewstate variables can retain data/values only of the current page
+
+Application Events:
+  Start
+  End
+  Error
+Session Events:
+  Session_Start
+  Session_End
+
+Statement Management : Capacity to retain the state of the Page(values of the various controls on the page)
+
+Types of State Management:
+
+1. Client Techniques
+   a) ViewState : Is a just a variable, so no load on ther server/system
+   b) Hidden fields: Is a class. So every time we call, it has to be instantiated, and all members to be initialized. More load on the system/server
+-both viewstate as well as hidden fields are local to the form/page
+   c) Cookies :When you want the data to travel between pages
+ are of 2 types : Peristant cookies and non Persistant cookies
+
+Persistant Cookies : will make use of a class called HttpCookies, which is a sealed class
+
+   d) Query Strings: are data that are passed along with the url using ?. Since they are visible on the address bar, sensitive data cannot be sent as a query string
+
+2. Server Techniques
+   a) Session state
+   b) Application state
+
+enable the trace to true under <system.web> of the web.config file.
+trace.axd file gets created with which we will be able to track all requests/response in the form of get/post etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
