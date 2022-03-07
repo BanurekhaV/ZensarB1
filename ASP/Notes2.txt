@@ -1,0 +1,30 @@
+Validation Controls:
+1. Required Field Validator
+2. Range Validator
+3. Regular Expression Validator
+4. Compare Validator
+5. Custom Validator 
+
+Master Pages: For consistent look and behaviour across all pages of the Asp.net application.
+
+master page will have .master extn.
+contentPlace Holder defines a region/area on the master page, to place the contents
+
+Caching: Storing the frequently refereed page in the client machine, to avoid roundtrips to the server everytime the page is requested. 
+Caching improves the performance and scalabity of an application
+3 types of caching:
+	 Page Caching
+         Fragment Caching
+         Data Caching
+How to implement caching :
+  @outputcache - directive
+  duration : time period for caching
+  varybyparam
+
+Excptions: Can be handled in a structured way using try carch block.
+In Asp.net, we can also handle errors at the Page level, Application Level
+
+Custom Error Handling : web.config 
+
+HttpErrorStatusCodes : 404 - page not found
+                       500 - internal server error

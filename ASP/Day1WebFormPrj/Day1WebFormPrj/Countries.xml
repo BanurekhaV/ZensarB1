@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Countries>
+  <Country>
+    <Id>101</Id>
+    <Name>India</Name>
+    <Continent>Asia</Continent>
+  </Country>
+  <Country>
+    <Id>102</Id>
+    <Name>UK</Name>
+    <Continent>Europe</Continent>
+  </Country>
+  <Country>
+    <Id>103</Id>
+    <Name>US</Name>
+    <Continent>North America</Continent>
+  </Country>
+  <Country>
+    <Id>104</Id>
+    <Name>France</Name>
+    <Continent>Europe</Continent>
+  </Country>
+</Countries>

@@ -18,6 +18,11 @@ namespace Day1WebFormPrj
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        
+        void Application_Error(object sender, EventArgs e)
+        {
+            Exception ex = Server.GetLastError();
+            Server.ClearError();
+            Response.Redirect("~/ErrorPage.aspx");
+        }
     }
 }
