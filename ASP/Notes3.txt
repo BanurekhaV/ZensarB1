@@ -1,0 +1,134 @@
+Page error handling
+Applcation error handling
+Custom error handling
+
+Security Aspects : Authentication and Authorization
+
+Anonymous Authentication 
+Windows Authentication 
+Form Authentication
+Passport Authentication  - third party sw(Microsoft.Net Passport sdk)
+
+Authorization: ?(indicates anonymous users) and * (indicates all users)
+
+
+RPC - Remote Procedure Calls
+Remoting : 
+WebServices :
+WCF- Windows Communication Framework
+Restful Api's
+
+Web Services : are web based functionality that uses web protocol, which can be used by web applications. It is a sw that is present on the on the internet.. Uses XML messaging services for communication. It is distributed, modular, self contained web services.
+
+Components of web services:
+
+1. Web
+2. XML
+3. SOA - Service Oriented Architecture. Possess well established patterns for defining a service, advertising the service, exposing the service, communicating with the service. Client will connect to web s ervices using the patterns. This arch. has service provider, service consumer and a service broker.
+4. SOAP protocol : 
+
+
+uses standards and protocols like : HTTP, XML, SOAP.
+the extension for web services is .asmx
+
+steps: launch a empty asp.net(framework) project
+- add a new item (webservices.asmx) and name it as FirstWebService
+- you should notice the varous decorators created for the above webservices
+- also observe your webservice is ingerited from Web.webservice
+
+-write various functions that you need it to be exposed by using [WebMethod] attribute
+- write the definitions for the functions 
+- build it
+-right click on the asmx, webservice that you created and run it with a browser.
+- you will observe the list of operations (methods)exposed by the service, also the WSDL(webservice description Lang) file with xml tags and soap request and response objects.
+- you can actually check the functionality from the browser itself
+- if everything is working fine, create a client app to consume the webservices
+
+- add a new project or create a fresh application. Empty project
+- add  reference (service reference of the web service - URL) in the window displayed and press Go or discover.
+You should see a list of service methods in the dialog box.
+- then give a proxy name in the text box below the dialogbox. click OK
+- Observe under connected service, you will see the proxy object
+
+- create the required web forms to access the various functions of the webservice.
+
+Ensure server services are running.
+
+Invoke the client application and use the functionalities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
