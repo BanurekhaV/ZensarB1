@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "FirstRequest";
+}
+
+<h2>FirstRequest</h2>
+
+@foreach(var f in TempData["flowers"]as List<string>)
+            {
+                <p>@f</p>
+            }
+

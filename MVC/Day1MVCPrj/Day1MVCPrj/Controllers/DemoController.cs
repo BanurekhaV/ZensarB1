@@ -23,7 +23,8 @@ namespace Day1MVCPrj.Controllers
 
         public ViewResult viewMethod()
         {
-            return View();
+            List<string> s = TempData["flowers"] as List<string>;
+            return View(s);
         }
         //only for displaying set of string values --
         public ContentResult Reply()
