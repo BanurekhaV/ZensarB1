@@ -26,9 +26,10 @@ namespace Day1MVCPrj.Controllers
         {
             List<Employee> emplist = new List<Employee>();
             emplist.Add(new Employee { ID = 1001, Name = "SaiKumar", Age = 22 });
-            emplist.Add(new Employee { ID = 1002, Name = "Srikanth", Age = 22 });
-            emplist.Add(new Employee { ID = 1003, Name = "Sai Venkat", Age = 22 });
+            emplist.Add(new Employee { ID = 1002, Name = "Srikanth", Age = 21 });
+            emplist.Add(new Employee { ID = 1003, Name = "Sai Venkat", Age = 20 });
             return View(emplist);
+            
         }
         //1. view type details based on a model
         public ActionResult DisplayEmployee()
@@ -38,9 +39,9 @@ namespace Day1MVCPrj.Controllers
         }
         //4. the called action method ListDepartment from Index
 
-        public ActionResult ListDepartment(Department d)
+        public ActionResult ListDepartment(List<Department> dlist)
         {
-            return View(d);
+            return View(dlist);
         }
 
         //5. calling action method of another controller(demo)- viewMethod
@@ -53,6 +54,14 @@ namespace Day1MVCPrj.Controllers
         public ActionResult Rdirect_action_another_controller()
         {
             return RedirectToAction("Reply", "Demo");
+        }
+
+        //loosely typed view
+        public ActionResult LosseType()
+        {
+            ViewBag.Name = "Zensar";
+            ViewData["Address"] = "Pune";
+            return View();
         }
     }
 }

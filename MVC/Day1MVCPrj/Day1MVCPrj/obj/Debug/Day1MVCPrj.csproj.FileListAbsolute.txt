@@ -72,7 +72,6 @@ E:\Banu\Zensar\Batch1\MVC\Day1MVCPrj\Day1MVCPrj\bin\System.Web.WebPages.Razor.xm
 E:\Banu\Zensar\Batch1\MVC\Day1MVCPrj\Day1MVCPrj\bin\Newtonsoft.Json.xml
 E:\Banu\Zensar\Batch1\MVC\Day1MVCPrj\Day1MVCPrj\bin\Antlr3.Runtime.pdb
 E:\Banu\Zensar\Batch1\MVC\Day1MVCPrj\Day1MVCPrj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Banu\Zensar\Batch1\MVC\Day1MVCPrj\Day1MVCPrj\obj\Debug\Day1MVCPrj.csproj.AssemblyReference.cache
 E:\Banu\Zensar\Batch1\MVC\Day1MVCPrj\Day1MVCPrj\obj\Debug\Day1MVCPrj.csproj.CoreCompileInputs.cache
 E:\Banu\Zensar\Batch1\MVC\Day1MVCPrj\Day1MVCPrj\obj\Debug\Day1MVCPrj.csproj.CopyComplete
 E:\Banu\Zensar\Batch1\MVC\Day1MVCPrj\Day1MVCPrj\obj\Debug\Day1MVCPrj.dll

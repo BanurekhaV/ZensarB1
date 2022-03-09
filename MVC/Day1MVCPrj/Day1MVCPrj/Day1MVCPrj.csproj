@@ -169,14 +169,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Demo\Index.cshtml" />
     <Content Include="Views\Demo\viewMethod.cshtml" />
-    <Content Include="Views\HR\DisplayEmployee.cshtml" />
-    <Content Include="Views\HR\ListEmployeeDetails.cshtml" />
-    <Content Include="Views\HR\ListDepartment.cshtml" />
     <Content Include="Views\Data\Rules.cshtml" />
     <Content Include="Views\Data\Index.cshtml" />
     <Content Include="Views\Data\TestData.cshtml" />
     <Content Include="Views\Data\FirstRequest.cshtml" />
     <Content Include="Views\Data\SecondRequest.cshtml" />
+    <Content Include="Views\HR\LosseType.cshtml" />
+    <Content Include="Views\HR\DisplayEmployee.cshtml" />
+    <Content Include="Views\HR\ListEmployeeDetails.cshtml" />
+    <Content Include="Views\HR\ListDepartment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Day2EFPrj.Models.Category>
+@{
+    ViewBag.Title = "GetCategoryDetails";
+}
+
+<h2>GetCategoryDetails</h2>
+
+@foreach(var c in Model)
+            {
+                <ul style="color:blue">
+                    <li>@c.CategoryID</li>
+                    <li>@c.CategoryName</li>
+                    <li>@c.Description</li>
+                </ul>
+            }
