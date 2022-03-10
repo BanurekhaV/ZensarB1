@@ -1,0 +1,28 @@
+﻿@model Day3Prj.Models.EmployeeAddress
+@{
+    ViewBag.Title = "EmployeeDetails";
+}
+<html>
+
+<head>
+    <title>@Model.PageTitle</title>
+</head>
+<body>
+    <h1>@Model.PageTitle</h1>
+    <div>
+        Employee Id : @Model.employee.EmployeeId
+        Employee Name: @Model.employee.EmpName
+    </div>
+    <div>
+        Employee Department : @Model.employee.Department
+        Employee Salary: @Model.employee.Salary
+    </div>
+    <div>
+        <h2>Employee Address</h2>
+        City : @Model.address.City
+        State : @Model.address.State
+        Country : @Model.address.Country
+    </div>
+</body>
+</html>
+

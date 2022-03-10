@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Day2EFPrj.Models.Order>
+@{
+    ViewBag.Title = "Cust_Orders_Details";
+}
+
+<h2>Cust_Orders_Details</h2>
+<h3> Showing the dEtails of Orders, Customers and Employees</h3>
+
+@foreach(var item in Model)
+            {
+                <ul typeof="none">
+                    <li>Order Id: @item.OrderID</li>
+                    <li>order Date: @item.OrderDate</li>
+                    <li>Customer Id : @item.CustomerID</li>
+                    <li>Cistomer Contact Name : @item.Customer.ContactName</li>
+                    <li>Employee Id: @item.EmployeeID</li>
+                    <li>Employee Name: @item.Employee.FirstName</li>
+                    <li>Shipper Id :@item.ShipName</li>
+                </ul>
+            }
+

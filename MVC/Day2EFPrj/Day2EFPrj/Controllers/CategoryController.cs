@@ -11,6 +11,7 @@ namespace Day2EFPrj.Controllers
     {
         NorthwindEntities db = new NorthwindEntities();
         // GET: Category
+        //1. returning the scaffolded view of the GetCategoryScaffolded Action method
         public ActionResult Index()
         {
             return RedirectToAction("GetCategoryScaffolded");
@@ -64,11 +65,40 @@ namespace Day2EFPrj.Controllers
             return RedirectToAction("GetCategoryScaffolded");
         }
 
-        //7. get details of a particular category
+        //7. get details of a particular category ID
         public ActionResult Details(int id)
         {
             Category c = db.Categories.Find(id);
             return View(c);
+        }
+
+        //8. Edit records
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            Category cat = db.Categories.Find(id);
+            return View(cat);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Category category)
+        {
+            Category cat = db.Categories.Find(category.CategoryID); //getting the before update data
+            cat.CategoryName = category.CategoryName; //setting the updated data to the cat object
+            cat.Description = category.Description;
+            db.SaveChanges();
+            return RedirectToAction("GetCategoryScaffolded");
+        }
+
+        //9. Delete a record
+
+        public ActionResult Delete(int id)
+        {
+            Category cat = db.Categories.Find(id);
+            db.Categories.Remove(cat);
+            db.SaveChanges();
+            return RedirectToAction("GetCategoryScaffolded");
+
         }
     }
 }
