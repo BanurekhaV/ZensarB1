@@ -1,0 +1,15 @@
+Assignment I
+
+1.Create a controller
+
+2.add an action method that returns all customers residing in germany
+
+3.add another action method, that returns customer details with an order id ==10248
+
+Assignment II
+
+1. Create database Moviedatabase 
+2. Create a table Movietable(mid,moviename,dateofrelease)
+
+3.Create a MVC Application to perform crud operation in movie table
+2.Display the movie released in any given year 
