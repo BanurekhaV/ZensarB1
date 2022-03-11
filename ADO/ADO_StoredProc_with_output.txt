@@ -1,0 +1,40 @@
+//function to call stored procedure with output parameter
+
+        public static void Storedproc()
+        {
+            con = getcon();
+            Console.WriteLine("Please Enter the Emp Code ");
+            string csvariable = Console.ReadLine();
+            //cmd = new SqlCommand("select *  from Employee ");
+            cmd = new SqlCommand("prcgetsal", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+           // cmd.Parameters.Add(new SqlParameter("@ecode", SqlDbType.NVarChar, 0, "ecode"));
+
+          //  cmd.Parameters.Add(new SqlParameter("@salary", SqlDbType.Float, 50, "salary"));
+            cmd.Parameters.AddWithValue("@inParam", csvariable).Direction = System.Data.ParameterDirection.Input;
+
+          //  cmd.Parameters.Add("@outParam", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.Output;
+
+           // cmd.Parameters.Add("@retParam", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.ReturnValue;
+
+            // Execute the command
+
+            cmd.ExecuteNonQuery();
+
+
+
+            // Get the values
+
+            //int retval = (int)cmd.Parameters["@retParam"].Value;
+
+            int outval = (int)cmd.Parameters["@outParam"].Value;
+
+            Console.WriteLine("Employee salary is {0}", outval);
+
+            //Console.WriteLine("Return value: {0}, Out value: {1}", retval, outval);
+
+            con.Close();
+        }
+
+
+
