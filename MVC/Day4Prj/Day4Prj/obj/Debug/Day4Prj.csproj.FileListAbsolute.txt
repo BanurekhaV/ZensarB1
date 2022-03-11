@@ -77,3 +77,7 @@ E:\Banu\Zensar\Batch1\MVC\Day4Prj\Day4Prj\obj\Debug\Day4Prj.csproj.CoreCompileIn
 E:\Banu\Zensar\Batch1\MVC\Day4Prj\Day4Prj\obj\Debug\Day4Prj.csproj.CopyComplete
 E:\Banu\Zensar\Batch1\MVC\Day4Prj\Day4Prj\obj\Debug\Day4Prj.dll
 E:\Banu\Zensar\Batch1\MVC\Day4Prj\Day4Prj\obj\Debug\Day4Prj.pdb
+E:\Banu\Zensar\Batch1\MVC\Day4Prj\Day4Prj\bin\EntityFramework.dll
+E:\Banu\Zensar\Batch1\MVC\Day4Prj\Day4Prj\bin\EntityFramework.SqlServer.dll
+E:\Banu\Zensar\Batch1\MVC\Day4Prj\Day4Prj\bin\EntityFramework.xml
+E:\Banu\Zensar\Batch1\MVC\Day4Prj\Day4Prj\bin\EntityFramework.SqlServer.xml

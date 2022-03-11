@@ -16,7 +16,8 @@ namespace ModelStateEg.Models
         [Display(Name ="Last Name")]
         public string Lastname {get;set;}
         public int Age { get; set; }
-        [EmailAddress(ErrorMessage ="Enter Valid Email Address")]
+        //[EmailAddress(ErrorMessage ="Enter Valid Email Address")]
+        [RegularExpression(@"^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$",ErrorMessage ="Enter Email in the Correct format")]
         [Required(ErrorMessage ="Email Cannot be Blank")]
         [Display(Name ="Email Address")]
         public string Emailaddress { get; set; }
