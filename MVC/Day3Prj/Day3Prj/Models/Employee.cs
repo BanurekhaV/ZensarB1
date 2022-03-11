@@ -11,6 +11,6 @@ namespace Day3Prj.Models
         public string EmpName { get; set; }
         public string Department { get; set; }
         public decimal Salary { get; set; }
-        public int AddressId { get; set; }
+        public int? AddressId { get; set; }
     }
 }

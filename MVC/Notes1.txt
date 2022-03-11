@@ -1,0 +1,87 @@
+View Model :
+
+Employee Model : eid, name, doj, salary, gender,deptid &dname
+
+Department Model : deptid, dname,loc
+
+Employee_department Model : ename,salary,dname
+
+class Mobile
+{
+  int Mobile Id;
+  string MobileName;
+  float Price;
+  String Companyname;
+  Battery battery;  
+}
+
+Mobile mobile = new Mobile()
+{ Mobile Id=10,MobileName="OnePlus",Price=28000,
+Companyname="China",battery.BatteryNo=0342516,battery.Manufacturer="Oneplus-china",Life="3yrs"
+};
+
+class Battery
+{
+  long BatteryNo;
+  string Manufacturer;
+  string Life;
+}
+
+sending the data from the view to the Model via the controller is called as Model Binding
+
+HTML Helpers:MVC framework supports Html helper classes that contains multiple different extension methods to create Html controls on the view.
+
+ Simple HtmlHelpers
+-------------------
+ Templated Html Helpers
+-------------------- : In situations where we want to change the display of the properties, along with data with some additional information. They are of 2 types : 1.Display Templates, 2. Editor Templates
+i) Display Template:
+--------------------
+1. @Html.Display("UserName") - used with not strongly typed view
+2. @Html.DisplayFor(model => model.Name) - used with strongly typed views. If model has complex type, we use this templated helper
+3. @Html.DisplayForModel()- strongly typed view that follow the model
+
+ii)Editor Templates:
+-------------------
+1. @Html.Editor("UserName")
+2. @Html.EditorFor(model => model.Name)
+3. @Html.EditorForModel()
+
+ Custom Helpers
+----------------
+
+<input type="text" name"Username" id="Username"/>
+@Html.TextBox("Username")
+
+to set html attributes
+@Html.TextBox("Username", "Rama", new{style="Background-color:Blue; color:White; font-size:20px, title=""Enter Your Name"})
+
+@ - symbol to refer to keywords
+
+@Html.TextBox("UserName", "Rama", new{@class="myclass"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

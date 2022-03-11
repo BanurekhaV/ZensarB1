@@ -15,6 +15,36 @@ namespace Day3Prj.Controllers
             return View();
         }
 
+        //eg for helpers
+        public ActionResult Details()
+        {
+            Employee employee = new Employee()
+            {
+                EmployeeId = 1,
+                EmpName = "Raja",
+                Department = "Admin",
+                Salary = 35000,
+            };
+            ViewData["sample"] = "Employee Details";
+          //  ViewData["Empdata"] = employee;
+            return View(employee);
+        }
+
+        public ActionResult Edit()
+        {
+            Employee employee = new Employee()
+            {
+                EmployeeId = 1,
+                EmpName = "Raja",
+                Department = "Admin",
+                Salary = 35000,
+            };
+            ViewData["sample"] = "Employee Details";
+            //  ViewData["Empdata"] = employee;
+            return View(employee);
+        }
+
+        //eg for view model
         public ActionResult EmployeeDetails()
         {
             //collect Employee Info
