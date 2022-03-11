@@ -49,5 +49,10 @@ namespace Day4Prj.Controllers
             return Json(student, JsonRequestBehavior.AllowGet);
         }
 
+        //using custom helpers
+        public ActionResult CustomeHelpersView()
+        {
+            return View();
+        }
     }
 }

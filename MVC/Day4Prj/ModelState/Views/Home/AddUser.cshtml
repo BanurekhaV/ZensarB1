@@ -1,0 +1,35 @@
+﻿@model ModelStateEg.Models.User
+@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>AddUser</h2>
+
+@using (Html.BeginForm())
+            {
+    @Html.ValidationSummary()
+<div>
+    <div>
+        @Html.LabelFor(m => m.Firstname)
+        @Html.TextBoxFor(m => m.Firstname)
+        @Html.ValidationMessageFor(m => m.Firstname)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Lastname)
+        @Html.TextBoxFor(m => m.Lastname)
+        @Html.ValidationMessageFor(m => m.Lastname)
+    </div>
+    <div>
+    @Html.LabelFor(m => m.Age)
+    @Html.TextBoxFor(m => m.Age)
+    @Html.ValidationMessageFor(m => m.Age)
+</div>
+    <div>
+        @Html.LabelFor(m => m.Emailaddress)
+        @Html.TextBoxFor(m => m.Emailaddress)
+        @Html.ValidationMessageFor(m => m.Emailaddress)
+    </div>
+    
+    <input type="submit" value="Save"/>
+</div>
+            }
