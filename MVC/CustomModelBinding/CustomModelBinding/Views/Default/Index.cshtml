@@ -1,0 +1,20 @@
+﻿@model CustomModelBinding.Models.CustomModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+            {
+<div>
+    Title : <input type="text" id="Title" name="Title" /> <br />
+    Date Of Joining : <input type="text" id="Date" name="Date" /> <br />
+    Month Of Joining: <input type="text" id="Month" name="Month" /> <br />
+    Year Of Joining <input type="text" id="Year" name="Year" /> <br />
+    <input type="submit" id="submit" value="Submit" />
+ 
+</div>
+            }
+<h2>Title: @ViewBag.CustTitle</h2>
+<h2>Date Of Joining : @ViewBag.DateHired</h2>
