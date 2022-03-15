@@ -34,16 +34,16 @@ namespace WebApiPrj1.Controllers
             return response;
         }
 
-        public HttpResponseMessage GetP(int pid)
-        {
-            var person = personlist.Find(x => x.Id == pid);
+        //public HttpResponseMessage GetP(int pid)
+        //{
+        //    var person = personlist.Find(x => x.Id == pid);
 
-            if (person == null)
-            {
-                return Request.CreateResponse(HttpStatusCode.NotFound, pid);
-            }
-            return Request.CreateResponse(HttpStatusCode.OK, person);
-        }
+        //    if (person == null)
+        //    {
+        //        return Request.CreateResponse(HttpStatusCode.NotFound, pid);
+        //    }
+        //    return Request.CreateResponse(HttpStatusCode.OK, person);
+        //}
 
         //Post
 
@@ -74,33 +74,29 @@ namespace WebApiPrj1.Controllers
             personlist.RemoveAt(id - 1);
         }
 
-            //implementing IHttpActionResult
+        //implementing IHttpActionResult
 
-            //public IHttpActionResult GetbyId(int pid)
-            //{
-            //    var person = personlist.Find(x => x.Id == pid);
-            //    if(person==null)
-            //    {
-            //        return NotFound();
-            //    }
-            //    return Ok(person);
-            //}
-            //public IHttpActionResult GetName(int pid)
-            //{
-            //    var person = from p in personlist
-            //                 where p.Id == pid
-            //                 select p.Name.ToString();
+        //public IHttpActionResult GetbyId(int pid)
+        //{
+        //    var person = personlist.Find(x => x.Id == pid);
+        //    if (person == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Ok(person);
+        //}
+        public IHttpActionResult GetName(int pid)
+        {
+          string person = personlist.Where(x => x.Id == pid).SingleOrDefault()?.Name;
 
-            //    string data = person.Name.ToString();
-
-            //    if (person == null)
-            //    {
-            //        return NotFound();
-            //    }
-            //    return new MyResult(person.ToString(), Request);
-            //}
-
+            if (person == null)
+            {
+                return NotFound();
+            }
+            return new MyResult(person, Request);
         }
+
+    }
 
 
 }
