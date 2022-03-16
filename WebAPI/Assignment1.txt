@@ -1,0 +1,14 @@
+Assignment 1
+
+-Create a Model called Country
+-Create properties for the model as below:
+ - Id,CountryName,Capital
+
+- Create a Empty Country controller
+
+- Perform crud operations using either (IHttpActionResult, HttpResponseMessage) and show the changes to the user.
+
+
+2. Create a stored procedure called GetSalarybyId which takes employee id as input and returns the salary of the employee.
+
+Call the stored procedure in your WebApi application. 
