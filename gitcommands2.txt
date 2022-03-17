@@ -1,0 +1,71 @@
+Git init <directoryname> : Will create a Git Repository in the local machine under the directory(by creating the directory)
+
+Git Init (in an existing directory with files also can be converted to a git local repo)
+
+After adding file/files to the staging area, if you want to remove from stage
+git rm --cached <filename> will remove the file from staging area
+or
+git restore --staged <filename> will restore back the file from staging to untracked
+
+After adding file/files to the staging area, if you want to remove physically
+
+git rm -f <filename> will delete the physical file from repo
+
+To revert the commit that we have done, use the below 
+
+git revert <commit ish> will revert the commit with a new commit of revert, and will remove the file from the repo.
+
+To get the file back we can revert the revert commit, and make changes to our file and then add,commit and push
+
+git reset:
+
+-reset with soft will delete the commit id, but retains all files that are part of the commit. You can modify,delete etc and then add,commit and push.
+-you can reset to any previous commit id also as long as it is not pushed to the remote repo. 
+
+-reset with mixed option, which is default, does not delete the commit id, and also retains all files of the comit, for changes,add,commit and push
+
+-reset with hard option without commit id removes the file/files
+-reset with hard option with commit id removes both the id and file/files physically
+
+
+Git Branch : 1. create a new directory called orgnewdir
+2. change to newdir (cd orgnewdir)
+3. create 2 files(orgname.txt with organization name) and (employees.txt with few employee names)
+4. add the 2 files to staging area (git add .)
+5. commit the stage details (git commit -m "first orgnewdir commit")
+
+6. see the log (git log --oneline) and observe the commit -ish(id)
+7. create a branch called newbranch
+8. just observe that both the master and the new branch are having the same details of files and commit -ish by
+   typing (git branch -v)
+9. move to the new branch (git checkout newbranch)
+10. see the files that are available in the new branch (ls/Dir)
+11. being in the nw branch add another file (notepad address.txt and write some content)
+12. add the new file to stage (git add .)
+13. commit the staged file (git commit -m "commit from new branch"
+14. Go back to master  (git checkout master) (try skipping this)
+15. Go to Github and create a new Repo called orgremote
+16. copy the Https url address 
+17. move to new branch(git checkout newbranch)
+18. add the remote repo being in branch(git remote add origin <url>
+19. move to master (git checkout master)
+20. now type (git push -u origin master) and observe the remarks
+21. Go to your github repo and see that only 2 files (orgname.txt and employees.txt)are added and not address.txt
+22. to add the address file to the remote repo do the following:
+     1. git push -u origin newbranch 
+Observe that the address.txt is added only to the newbranch in remote repo and not to the master branch
+     2. To make the address.txt file avialable even in the master branch of the remote repo type (git merge newbranch)
+     3. Observe the commit ids of both the commit by typing (git log --oneline)
+     4. Now push the commits again (git push origin master)
+Observe that both the master as well as newbranch in the remote repo are having all the files
+
+-To remove the local branch type(git branch -d newbranch)
+-To remove the remote branch type(git push origin --delete newbranch)
+- to see all branches type(git branch or git branch --list)
+
+
+
+
+
+
+
