@@ -1,0 +1,44 @@
+Git : Is an Open Source Distributed Version Control System
+Git Hub : Source Code Management System
+
+Index : Is a Staging Directory
+
+Git Commands & Steps
+
+0. Create a Remote Repo on the Github. 
+
+Create a Folder as a working folder in any drive of your machine
+1.Git Init : This command will initialize the folder as a git Folder with lots of metadata information
+2. You can configure your name and email using the below command
+- git config --global user.name "<owner name>"
+  git config --global user.email "<mail id with which you created your git account">
+
+3. Create some files using echo/touch/cat(if using gitbash and you know linux commands) else add files to the directory directly.
+
+4 add files to the staging directory using below options
+  - git add <filename> or git add .
+5.You should commit the changes made to the staging directory as below
+ - git commit -m "<message>"
+6. Next we need to map our local repo with remote repo using
+   -git remote add origin <url>(ensure you copy the remote repo url in the https format (created as step 0)
+7. Push the commits to the remote repo
+  - git push -u origin master/main
+8. If any changes are made to the remote repo, you can pull them from the remote using
+  -git pull origin master/main
+
+This will enable complete sync
+
+9. For knowing the status of activities you can use
+  - git status
+10. use -git log to see all the commits with their ish number
+
+11. git branch <branch name> to create a new branch
+12. to move to the newly created branch git checkout <branchname>
+13. to merge one or more ranches - git merge <branch name>
+14. to rename a branch - git branch -m <oldname> <newname>
+
+TFS : Team Foundation Server (microsofts licensed vcs)
+
+Check In
+Check Out
+Shelve
