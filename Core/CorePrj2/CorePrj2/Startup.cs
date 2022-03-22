@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CorePrj2.Models;
 
 namespace CorePrj2
 {
@@ -17,6 +18,17 @@ namespace CorePrj2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            // services.AddControllersWithViews();
+
+            //1. one way of registering the services
+            //by default service would be singleton
+            //or you can explicitly specify the lifetime access
+           // services.Add(new ServiceDescriptor(typeof(IStudentRepository), new StudentRepository()));
+           // services.Add(new ServiceDescriptor(typeof(IStudentRepository), typeof(StudentRepository), ServiceLifetime.Singleton));
+
+            //2. other way of registering the services with the services objects extension method
+            services.AddSingleton<IStudentRepository, StudentRepository>();
+           // services.AddSingleton(typeof(IStudentRepository), typeof(StudentRepository));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

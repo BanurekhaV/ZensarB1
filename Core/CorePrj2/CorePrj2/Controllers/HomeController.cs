@@ -9,16 +9,48 @@ namespace CorePrj2.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        //creating a reference variable/object of the Service interface 
+        readonly IStudentRepository isr = null;
+
+        //Initialize the read only variable in the constructor 
+        //injecting the services object(interface) into the constructor of the class)
+        //public HomeController(IStudentRepository repo)
+        //{
+        //    isr = repo;
+        //}
+
+        
+        public JsonResult Index()
         {
-            return"This is the Index View of Home";
+            List<Student> all = isr.GetAllStudents();
+            return Json(all);
         }
 
-        public IActionResult GetDetails(int sid)
+        public JsonResult GetStudentDetails(int sid)
         {
-            StudentRepository sr = new StudentRepository();
-            Student stud = sr.GetStudentById(sid);
-            return View(stud);
+            Student student = isr.GetStudentById(sid);
+            return Json(student);
         }
+
+
+        //before injection application services
+        //public JsonResult Index()
+        //{
+        //    StudentRepository sr = new StudentRepository();
+        //    List<Student> allstudents = sr.GetAllStudents();
+        //    return Json(allstudents);
+        //}
+
+        ////action method to call one of the implented services of student repository
+        //public IActionResult GetStudentDetails(int sid)
+        //{
+        //    StudentRepository sr1 = new StudentRepository();
+        //    Student stud = sr1.GetStudentById(sid);
+        //    return Json(stud);
+        //}
+
+        //using the application services injected thru constructor
+
+
     }
 }

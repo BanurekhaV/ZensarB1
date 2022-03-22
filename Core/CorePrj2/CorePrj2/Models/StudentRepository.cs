@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 
 namespace CorePrj2.Models
 {
-    public class StudentRepository
+    //service implementation
+    public class StudentRepository : IStudentRepository
     {
-        public IEnumerable<Student> GetAllStudents()
+        public List<Student> stdlist()
         {
-            List<Student> stdlist = new List<Student>()
+           return new List<Student>()
            {
                new Student{StdId=1, StdName="Shivam",Gender="Male",Discipline="CSC"},
                new Student{StdId=2, StdName="Rishab",Gender="Male",Discipline="ECE"},
@@ -17,19 +18,18 @@ namespace CorePrj2.Models
                new Student{StdId=4, StdName="Arbaz",Gender="Male",Discipline="CSC"},
                new Student{StdId=5, StdName="Namitha",Gender="Female",Discipline="EEE"},
            };
-            return stdlist;
-           }
-        public Student GetStudentById(int id)
-        {
-            Student s = new Student()
-            {
-                StdId = id,
-                StdName = "Nikitha",
-                Gender = "Female",
-                Discipline = "IT"
-            };
-
-            return s;
         }
+
+        public List<Student> GetAllStudents()
+        {
+            return stdlist();
+        }
+
+        public Student GetStudentById(int stdid)
+        {
+            return stdlist().FirstOrDefault(m => m.StdId == stdid);
+        }
+
+        
     }
 }
