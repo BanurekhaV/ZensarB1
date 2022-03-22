@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "ShowMobile";
+}
+
+<h1>ShowMobile</h1>
+
+<h2>ViewData Details</h2>
+@foreach (var item in ViewData["androids"]as List<string>)
+            {
+                <li>@item</li>
+            }
+<hr/>
+<h2>ViewBag Details</h2>
+
+@foreach(var item in ViewBag.mobilebag)
+            {
+                <li>@item</li>
+            }

@@ -1,0 +1,65 @@
+Dot Net Core : It is a significant redesign of asp.net to support modern cloud based connected applications,Iot,mobile, webapplications,ML etc..
+
+Why core: The architectural changes that makes the appln. much more leaner, modular framework
+1. It is a cloud ready environment based on configuration system
+2. built in dependency injection
+3. Light weight, modular HTTP request Pipeline
+4. Ability to host on multiple servers apart from IIS(Apache, Nginx)/self hosting
+5. Editors supported to build asp.net core : Visual Studio, Visual studio code, Sublime, Atom etc
+Application Anatomy :
+ Empty:
+ Web Application - MVC
+ API:
+ Web Application - Razor Pages
+ Razor Class Library:
+ Angular, React js, Redux:
+
+Services: Is a component that is intended for common consumption in an application, which can be injected into the constructor/method/property of an application
+
+Middlewares: A components of the applications that perform asynchronous login on HTTPContext. They can invoke the next middleware or terminate the request directly. We generally "Use" the middleware. 
+ASP.Net Core comes with rich set of middlewares
+
+Hosting Model : We have In-Process and Out-of-Process 
+Inprocess is  default. We can verify this from the project properties or we can add tag named <ASPNetCoreHostingModel> and specify the hosting model
+
+Whenever the CreateDefaultBuilder() is called, it checks for the value of hosting, then it internally calls a middleware UseIIS(). Then it hosts the application inside the IIS(worker process- w3wp.exe or iisexpress.exe for IISExpress)
+
+
+
+Kestrel: Cross platform web server.It is by default included as an internal server. We can use a reverse proxy server like IIS/Nginx/Apache to configure additional informations and to configure security aspects
+
+Launch Settings.Json : Is used only within the develpoment environment, and is not required for production environment. In case we want variables with values to b used in production server, then we use appsettings.json file for the same
+
+Command Name		HostingModel			Internal WebServer		External WebServer
+Project			Hostings are Ignored		Only Kestrel is used			..
+IIS Express	        In Process			Only IIS Built in Server is used	..
+IIS Express		OutofProcess			Kestrel is used				IIS
+IIS			InProcess			Only IIS web server is used
+IIS			OutofProcess			Kestrel					IIS
+
+appsettings.json : application configuration settings are stored here viz.
+  1. Files
+  2. User Secrets
+  3. Environment Variables
+  4. CommandLine arguments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
