@@ -12,7 +12,15 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "E:\Banu\Zensar\Batch1\Core\CorePrj2\CorePrj2\Views\_ViewImports.cshtml"
+using CorePrj2.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"15e80b8d916d72b457a27b8bb27f77d9415ee4e9", @"/Views/Sample/Information.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"488948faf6d078a6140de82ebb3487a3266ca8b3", @"/Views/_ViewImports.cshtml")]
     public class Views_Sample_Information : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

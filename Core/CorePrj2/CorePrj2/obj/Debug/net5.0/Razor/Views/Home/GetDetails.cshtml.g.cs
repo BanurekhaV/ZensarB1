@@ -12,7 +12,15 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "E:\Banu\Zensar\Batch1\Core\CorePrj2\CorePrj2\Views\_ViewImports.cshtml"
+using CorePrj2.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eb8b024961e02c8172063582e13d99e64c9ea192", @"/Views/Home/GetDetails.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"488948faf6d078a6140de82ebb3487a3266ca8b3", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_GetDetails : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<CorePrj2.Models.Student>
     {
         #pragma warning disable 1998

@@ -1,0 +1,28 @@
+﻿@model Product 
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<form method="post" asp-controller="Home" asp-action="Create" asp-antiforgery="true">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input class="form-control" asp-for="Name" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Price</label>
+        <input class="form-control" asp-for="Price" />
+    </div>
+    <div class="form-group">
+        <!--<label asp-for="Quantity">Quantity</label>
+        <input class="form-control" asp-for="Quantity" />-->
+        <select class="form-control" asp-for="Quantity">
+            <option disabled selected value="">Select Quantity</option>
+            <option>50</option>
+            <option>100</option>
+            <option>150</option>
+            <option>200</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+ </form>

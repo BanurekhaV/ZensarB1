@@ -39,22 +39,22 @@ namespace CorePrj1
                 app.UseExceptionHandler("/Home/Error");
             }
             //FirstMiddleware
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("Middleware 1: Request");
-                await next();
-                await context.Response.WriteAsync("Middleware1. Response");
-            });
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("Middleware2 : Request");
-                await next();
-                await context.Response.WriteAsync("Middleware2. Response");
-            });
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Middleware 3: Both request and response\n");
-            });
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Middleware 1: Request");
+            //    await next();
+            //    await context.Response.WriteAsync("Middleware1. Response");
+            //});
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Middleware2 : Request");
+            //    await next();
+            //    await context.Response.WriteAsync("Middleware2. Response");
+            //});
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Middleware 3: Both request and response\n");
+            //});
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -63,10 +63,10 @@ namespace CorePrj1
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                 {
-                     await context.Response.WriteAsync(Configuration["MyOwnKey"]);
-                 });
+                //endpoints.MapGet("/", async context =>
+                // {
+                //     await context.Response.WriteAsync(Configuration["MyOwnKey"]);
+                // });
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

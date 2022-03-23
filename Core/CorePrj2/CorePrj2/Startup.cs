@@ -29,6 +29,7 @@ namespace CorePrj2
             //2. other way of registering the services with the services objects extension method
             services.AddSingleton<IStudentRepository, StudentRepository>();
            // services.AddSingleton(typeof(IStudentRepository), typeof(StudentRepository));
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,7 +43,7 @@ namespace CorePrj2
                 };
                 app.UseDeveloperExceptionPage();
             }
-           // 4.we can use FileServer middleware to handle both default files and static files middleware
+            // 4.we can use FileServer middleware to handle both default files and static files middleware
             //FileServerOptions fso = new FileServerOptions();
             //fso.DefaultFilesOptions.DefaultFileNames.Clear();
             //fso.DefaultFilesOptions.DefaultFileNames.Add("MyHtmlPage.html");
@@ -56,6 +57,7 @@ namespace CorePrj2
             app.UseDefaultFiles(dfo);
             //1. use static files middleware to serve any static files
             app.UseStaticFiles();*/
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
@@ -67,7 +69,7 @@ namespace CorePrj2
                 //    await context.Response.WriteAsync("Hello World!");
                 //});
             });
-            
+
         }
     }
 }

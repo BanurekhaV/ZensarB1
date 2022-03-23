@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <table border="1" style="width:900px;font-family:'Book Antiqua'">
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <h2>Domain Header</h2>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:200px">
+                <h3>Left Stack Panel</h3>
+            </td>
+            <td style="width:700px">
+                @RenderBody()
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;font-size:x-small">
+                <h3>Footer</h3>
+            </td>
+        </tr>
+
+    </table>
+    <!-- <script src="~/js/Myjs.js"></script>-->
+    @* @if (IsSectionDefined("Scripts"))
+        // {
+         @RenderSection("Scripts", required: false)
+        // }*@
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
