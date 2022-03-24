@@ -112,3 +112,5 @@ E:\Banu\Zensar\Batch1\Core\Core3_Taghelpers\Core3_Taghelpers\obj\Debug\net5.0\Co
 E:\Banu\Zensar\Batch1\Core\Core3_Taghelpers\Core3_Taghelpers\obj\Debug\net5.0\Core3_Taghelpers.csproj.AssemblyReference.cache
 E:\Banu\Zensar\Batch1\Core\Core3_Taghelpers\Core3_Taghelpers\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 E:\Banu\Zensar\Batch1\Core\Core3_Taghelpers\Core3_Taghelpers\obj\Debug\net5.0\Razor\Views\Home\Create.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Core3_Taghelpers\Core3_Taghelpers\obj\Debug\net5.0\Razor\Views\Job\Index.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Core3_Taghelpers\Core3_Taghelpers\obj\Debug\net5.0\Razor\Views\Job\Accepted.cshtml.g.cs

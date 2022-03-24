@@ -1,0 +1,27 @@
+﻿@model JobApplication
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Accepted";
+}
+
+<h1>Accepted</h1>
+
+<table class=" table table-bordered">
+    <tr>
+        <th>Your Name is :</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Your Date of Birth :</th>
+        <td>@Model.DOB</td>
+    </tr>
+    <tr>
+        <th>Your Experience is :</th>
+        <td>@Model.Experience</td>
+    </tr>
+    <tr>
+        <th>Have You Accepted Terms ?:</th>
+        <td>@Model.AcceptTerms</td>
+    </tr>
+</table>
+<a class="btn btn-success" asp-action="Index">Back</a>
