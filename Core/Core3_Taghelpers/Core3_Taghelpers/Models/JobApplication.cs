@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using Core3_Taghelpers.CustomValidators;
 
 namespace Core3_Taghelpers.Models
 {
@@ -11,6 +12,7 @@ namespace Core3_Taghelpers.Models
         [Required(ErrorMessage ="Name cannot be Blank")]
         [Display(Name="Job Applicant's Name:")]
         public string Name { get; set; }
+        [CustomDate]
         public DateTime DOB { get; set; }
         [Range(0,5)]
         public string Experience { get; set; }
