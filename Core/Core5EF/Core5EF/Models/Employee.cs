@@ -11,5 +11,6 @@ namespace Core5EF.Models
         public string Name { get; set; }
         public string Gender { get; set; }
         public float Salary { get; set; }
+        public string Address { get; set; }
     }
 }

@@ -141,3 +141,8 @@ E:\Banu\Zensar\Batch1\Core\Core5EF\Core5EF\bin\Debug\net5.0\runtimes\win-arm\lib
 E:\Banu\Zensar\Batch1\Core\Core5EF\Core5EF\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 E:\Banu\Zensar\Batch1\Core\Core5EF\Core5EF\obj\Debug\net5.0\Core5EF.csproj.AssemblyReference.cache
 E:\Banu\Zensar\Batch1\Core\Core5EF\Core5EF\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Core5EF\Core5EF\obj\Debug\net5.0\Razor\Views\Home\AddEmployee.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Core5EF\Core5EF\obj\Debug\net5.0\Razor\Views\Home\GetEmployeeById.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Core5EF\Core5EF\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Core5EF\Core5EF\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+E:\Banu\Zensar\Batch1\Core\Core5EF\Core5EF\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll

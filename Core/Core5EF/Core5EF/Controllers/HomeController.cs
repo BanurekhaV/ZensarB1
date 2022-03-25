@@ -26,7 +26,39 @@ namespace Core5EF.Controllers
             return View(empmodel);
         }
 
+        public ViewResult AddEmployee()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddEmployee(Employee emp)
+        {
+            emprepo.AddEmployee(emp);
+            return RedirectToAction("Index");
+        }
 
+        public IActionResult GetEmployeeById(int Id)
+        {
+           Employee employee= emprepo.GetEmployeeById(Id);
+            return View(employee);
+        }
+        public IActionResult Edit(int ID)
+        {
+            Employee emp =emprepo.GetEmployeeById(ID);
+            return View(emp);
+        }
+        [HttpPost]
+        public IActionResult Edit(Employee employee)
+        {
+            emprepo.UpdateEmployee(employee);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int Id)
+        {
+            emprepo.DeleteEmployee(Id);
+            return RedirectToAction("Index");
+        }
         public IActionResult Privacy()
         {
             return View();

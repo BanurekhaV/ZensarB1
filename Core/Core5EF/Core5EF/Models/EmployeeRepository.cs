@@ -19,6 +19,17 @@ namespace Core5EF.Models
             return employee;
         }
 
+        public Employee DeleteEmployee(int Id)
+        {
+            Employee e = db.Employees.Find(Id);
+            if(e != null)
+            {
+                db.Employees.Remove(e);
+                db.SaveChanges();
+            }
+            return e;
+        }
+
         public IEnumerable<Employee> GetAllEmployees()
         {
             return db.Employees;
@@ -27,6 +38,26 @@ namespace Core5EF.Models
         public Employee GetEmployeeById(int Id)
         {
             return db.Employees.Find(Id);
+        }
+
+        public Employee UpdateEmployee(Employee empchanges)
+        {
+            
+            var employee = db.Employees.Attach(empchanges);
+            employee.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            db.SaveChanges();
+            return empchanges;
+
+            //db.Employees.Attach(empchanges);
+            //var entry = db.Entry(empchanges);
+            //entry.Property(e => e.Name).IsModified = true;
+            //entry.Property(e => e.Gender).IsModified = true;
+            //entry.Property(e => e.Salary).IsModified = true;
+            // other changed properties
+           // entry.State = EntityState.Modified;
+           // db.SaveChanges();
+            //return empchanges;
+
         }
     }
 }
