@@ -112,3 +112,4 @@ E:\Banu\Zensar\Batch1\Core\Core3Prj\Core3Prj\obj\Debug\net5.0\Razor\Views\Home\D
 E:\Banu\Zensar\Batch1\Core\Core3Prj\Core3Prj\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 E:\Banu\Zensar\Batch1\Core\Core3Prj\Core3Prj\obj\Debug\net5.0\Razor\Views\Home\_ViewStart.cshtml.g.cs
 E:\Banu\Zensar\Batch1\Core\Core3Prj\Core3Prj\obj\Debug\net5.0\Razor\Views\Shared\_MyLayout.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Core3Prj\Core3Prj\obj\Debug\net5.0\Razor\Views\Home\TestPartialView.cshtml.g.cs

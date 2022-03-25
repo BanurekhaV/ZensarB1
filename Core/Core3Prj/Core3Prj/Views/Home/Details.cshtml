@@ -5,4 +5,6 @@
 }
 
 <h1>Details</h1>
+<p> The below Text is coming from Child View</p>
 
+@await Html.PartialAsync("TestPartialView", new List<string> { "SQL","CSharp","UnitTesting","Asp.Net","MVC","MVC Core"})
