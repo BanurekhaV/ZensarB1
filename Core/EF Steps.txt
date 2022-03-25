@@ -1,0 +1,157 @@
+
+  Console Application : Packages to be included
+  -  Microsoft.EntityFrameworkCore 
+  -  Microsoft.EntityFrameworkCore.Relational
+  -  Microsoft.EntityFrameworkCore.SqlServer
+(Just you can install only this package, since it has dependency on the above two, and hence will install automatically) Please check for the correct version that matches the Core SDK
+
+  -  Microsoft.EntityFrameworkCore.Tools (This is to enable models/context etc. in the absence of ADOEntityDataModel - wizard)
+
+  MVC Application : Apart from the above packages, we will need to include the below
+  Microsoft.EntityFrameworkCore.Design
+
+To verify if installed type the below in PMC
+--dotnet ef (you should see a horse picture)
+
+Single Layer Application (Presentation Layer, Business Layer and Data Layer all are a part of the same application)
+
+Multiple Layer Application(PL, BL, DL can be as seperate projects)
+
+The packages or any other DB related tasks can be done either at the PM console or CLI 
+
+Code First Approach : 
+
+now we are ready to work with core
+
+Code First : Create a Model class called Employee in the Models Folder
+add properties with or without data annotations
+
+- next create a DbContext class caled EmployeeDbContext with dbcontextoptions as below: and also dbsets
+
+ public class EmployeeDbContext:DbContext
+    {
+        public EmployeeDbContext(DbContextOptions<EmployeeDbContext>options):base(options)
+        {
+
+        }
+        public DbSet<Employee>Employees { get; set; }
+    }
+
+- Next register the context class in the starupclass as below : include required namespaces(Microsoft.EntityFrameworkCore;
+
+public void ConfigureServices(IServiceCollection services)
+        {
+            
+            services.AddControllersWithViews();
+            services.AddDbContextPool<EmployeeDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("EmployeeDBConnection")));
+          
+
+        }
+
+- In order to give the connection string, we need to add it in the appsettings.json either after AllowedHosts or in the beginning as below:
+
+"AllowedHosts": "*",
+  "ConnectionStrings": {
+    "EmployeeDBConnection":"Server=Desktop-PU8R89M\\BRSQL;database=NewEmployeeDB;Trusted_Connection=True;"
+    
+  },
+-Note : you can also give "Server=(localdb)\\MSSQLLocalDB"
+
+- to work with repository system, create repository interface and a respository implementation class of employee:
+
+public interface IEmployeeRepository
+    {
+        Employee GetEmployee(int Id);
+        IEnumerable<Employee> GetAllEmployees();
+        Employee Add(Employee employee);
+        Employee Update(Employee employeechanges);
+        Employee Delete(int Id);
+    }
+
+Now we need a implementor class. So create EmployeeRepository.cs as below that implements all methods
+
+public class EmployeeRepository : IEmployeeRepository
+    {
+        private readonly EmployeeDbContext db;
+        public EmployeeRepository(EmployeeDbContext context)
+        {
+            db = context;
+        }
+        public Employee Add(Employee employee)
+        {
+            db.Employees.Add(employee);
+            db.SaveChanges();
+            return employee;
+        }
+
+        public Employee Delete(int Id)
+        {
+            Employee employee = db.Employees.Find(Id);
+            if(employee !=null)
+            {
+                db.Employees.Remove(employee);
+                db.SaveChanges();
+            }
+            return employee;
+        }
+
+        public IEnumerable<Employee> GetAllEmployees()
+        {
+            return db.Employees;
+        }
+
+        public Employee GetEmployee(int Id)
+        {
+            return db.Employees.Find(Id);
+        }
+
+        public Employee Update(Employee employeechanges)
+        {
+            var employee = db.Employees.Attach(employeechanges);
+            employee.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            db.SaveChanges();
+            return employeechanges;
+        }
+    }
+
+
+-- next we need to register the Service Interface in startup class as below:
+services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
+//scoped because we want the DI object for every request scope.
+
+--next use the DI in home controller as below
+public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+        private readonly IEmployeeRepository emprepo;
+
+        public HomeController(ILogger<HomeController> logger, IEmployeeRepository empr)
+        {
+            _logger = logger;
+            emprepo = empr;
+        }
+
+        public IActionResult Index()
+        {
+            var model = emprepo.GetAllEmployees();
+            return View(model);
+        }
+
+
+
+
+Run your application and see the home/index
+
+- Add-Migration <some meaningful name>
+-update-database
+
+
+
+Database First Approach : Give an existing database name in the appsettings.Json, and then in the PMconsole type:
+
+Scaffold-DbContext "Server=DESKTOP-PU8R89M\\BRSQL;Database=EFCoreEmployeeDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -outputDir Models
+
+whenever there any changes then we need to scaffold the db context again with -F (-force) option
+
+Scaffold-DbContext "Server=DESKTOP-PU8R89M\\BRSQL;Database=EFCoreEmployeeDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -outputDir Models -F

@@ -1,0 +1,15 @@
+﻿@model IEnumerable<CoreEFDbFirst.Models.Product>
+@{
+    ViewData["Title"] = "GetDetails";
+}
+
+<h1>Get product Details</h1>
+@foreach(var item in Model)
+            {
+                <li>@item.ProductId</li>
+                <li>@item.ProductName</li>
+                <li>@item.Price</li>
+                <li>@item.QuantityAvailable</li>
+                <br/>
+            }
+
