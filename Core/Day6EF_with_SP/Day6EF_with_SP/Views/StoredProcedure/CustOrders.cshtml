@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Day6EF_with_SP.Models.CustOrdersOrders>
+@{
+    ViewData["Title"] = "CustOrders";
+}
+
+<h1>CustOrders</h1>
+
+@foreach(var i in Model)
+            {
+                <ul>
+                    <li>@i.OrderDate</li>
+                    <li>@i.RequiredDate</li>
+                    <li>@i.ShippedDate</li>
+                </ul>
+            }

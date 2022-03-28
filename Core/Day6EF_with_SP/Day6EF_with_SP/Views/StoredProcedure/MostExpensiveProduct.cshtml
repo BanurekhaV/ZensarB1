@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Day6EF_with_SP.Models.Ten_Most_Expensive_Products>
+@{
+    ViewData["Title"] = "MostExpensiveProduct";
+}
+
+<h1>MostExpensiveProduct</h1>
+
+@foreach(var item in Model)
+            {
+                <ul>
+                    <li>@item.TenMostExpensiveProducts</li>
+                    <li>@item.UnitPrice</li>
+                </ul>
+            }

@@ -1,0 +1,13 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "GetCategorybySortedName";
+}
+
+<h1>GetCategorybySortedName</h1>
+
+@foreach(string s in Model)
+            {
+                <ul>
+                    <li>@s</li>
+                </ul>
+            }

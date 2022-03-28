@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "XoqlAnaLn6fJi+Q7zGdU8hCOcPWG/DehUMukY8+XjBaX24uk3Ka9aK4hisNVu36kfTQJnrE3zShtqqsFeXs+Dw==",
+  "dgSpecHash": "9b9FZPafxahqZH1FMyjwvbqrT5O7fZ054UrwD1WHT4wsLY13PyBkVsB35vYoJgizIqo1dzsHn2/i7Wyk9MGHhw==",
   "success": true,
   "projectFilePath": "E:\\Banu\\Zensar\\Batch1\\Core\\CoreEFDbFirst\\CoreEFDbFirst\\CoreEFDbFirst.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\rekha\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
     "C:\\Users\\rekha\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\rekha\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\rekha\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

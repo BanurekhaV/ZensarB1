@@ -27,8 +27,8 @@ namespace CoreEFDbFirst.Controllers
 
         public IActionResult GetDetails()
         {
-            List<Product> products = db.Products.ToList();
-            return View(products);
+           // List<Product> products = db.Product.ToList();
+            //return View(products);
         }
         public IActionResult Privacy()
         {

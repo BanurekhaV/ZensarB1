@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Day6EF_with_SP.Models.Category>
+@{
+    ViewData["Title"] = "GetCategoryDetails";
+}
+
+<h1>GetCategoryDetails</h1>
+
+@foreach(var item in Model)
+            {
+                <ul style="color:blueviolet">
+                    <li>@item.CategoryId</li>
+                    <li>@item.CategoryName</li>
+                    <li>@item.Description</li>
+                </ul>
+            }
