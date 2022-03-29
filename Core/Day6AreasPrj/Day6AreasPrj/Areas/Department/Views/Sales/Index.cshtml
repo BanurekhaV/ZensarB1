@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Day6AreasPrj.Areas.Department.Models.Location>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Location ID</th>
+                <th>Adress</th>
+                <th>City</th>
+                <th>Employee List</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Address</td>
+                    <td>@item.City</td>
+                    <td>
+                        <a asp-area="Employee"
+                           asp-controller="SalesEmployee"
+                           asp-action="GetEmployeeByLocation"
+                           asp-route-locationID="@item.ID">View Employee in Location </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day7WebApi", "Day7WebApi\Day7WebApi.csproj", "{05262B4C-83C0-423F-A3CD-DF3B1CBD638F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05262B4C-83C0-423F-A3CD-DF3B1CBD638F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05262B4C-83C0-423F-A3CD-DF3B1CBD638F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05262B4C-83C0-423F-A3CD-DF3B1CBD638F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05262B4C-83C0-423F-A3CD-DF3B1CBD638F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1A8F851-1B92-41DA-A423-6B509A0A3A38}
+	EndGlobalSection
+EndGlobal

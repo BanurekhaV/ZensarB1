@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Day6AreasPrj.Areas.Employee.Models.Employee>
+@{
+    ViewData["Title"] = "GetEmployeeByLocation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>GetEmployeeByLocation</h1>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Emp Id</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Location Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var e in Model)
+            {
+                <tr>
+                    <td>@e.ID</td>
+                    <td>@e.Name</td>
+                    <td>@e.Designation</td>
+                    <td>@e.LocationID</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -26,5 +26,7 @@ namespace Day6EF_with_SP.Controllers
             string cid = "ALFKI";
             return View(db.CustOrdersOrders.FromSqlRaw("[dbo].[CustOrdersOrders]@p0", parameters: new[] { cid }).ToList());
         }
+
+
     }
 }

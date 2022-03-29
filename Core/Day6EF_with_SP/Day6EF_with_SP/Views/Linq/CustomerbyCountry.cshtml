@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Day6EF_with_SP.Models.Customer>
+@{
+    ViewData["Title"] = "CustomerbyCountry";
+}
+
+<h1>CustomerbyCountry</h1>
+
+@foreach(var i in Model)
+            {
+                <ul>
+                    <li>@i.CustomerId</li>
+                    <li>@i.CompanyName</li>
+                    <li>@i.ContactName</li>
+                    <li>@i.Country</li>
+                </ul>
+            }
