@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Reservation>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Reservation Details from API</h2>
+<a asp-action="AddReservation" class="btn btn-sm btn-primary">Add Reservation</a>
+<a asp-action="DeleteReservation" class="btn btn-sm btn-primary">Get Reservation</a>
+<table class="table table-sm table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>StartLocation</th>
+            <th>EndLocation</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var v in Model)
+            {
+                <tr>
+                    <td>@v.ID</td>
+                    <td>@v.Name</td>
+                    <td>@v.StartLocation</td>
+                    <td>@v.EndLocation</td>
+                    <td>
+                        <form asp-action="DeleteReservation" method="post">
+                            <input type="hidden" value="@v.ID" name="ReservationId"/>
+                            <input type="image" src="~/Images/close.jpg"/>
+                        </form>
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>

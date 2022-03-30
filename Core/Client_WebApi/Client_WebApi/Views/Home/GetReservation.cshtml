@@ -1,0 +1,39 @@
+﻿@model Reservation
+@{
+    ViewData["Title"] = "GetReservation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Get Reservation By Id <a asp-action="Index" class="btn btn-sm btn-primary">Back</a></h2>
+<h3>@ViewBag.StatusCode</h3>
+<form asp-action="GetReservation" method="post">
+    <div class="form-group">
+        <label for ="id">ID:</label>
+        <input class ="form-control" name="id" />
+    </div>
+    <div class="text-center panel-body">
+        <button type="submit" class="btn btn-sm btn-primary">Get Reservation</button>
+    </div>
+</form>
+@if (Model != null)
+{
+    <h2>Reservation</h2>
+    <table class=" table table-sm table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>StartLocation</th>
+                <th>EndLocation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.ID</td>
+                <td>@Model.Name</td>
+                <td>@Model.StartLocation</td>
+                <td>@Model.EndLocation</td>
+            </tr>
+        </tbody>
+    </table>
+}
