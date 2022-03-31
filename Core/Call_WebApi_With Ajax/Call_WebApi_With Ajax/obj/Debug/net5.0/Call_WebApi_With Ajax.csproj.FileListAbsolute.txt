@@ -9,7 +9,6 @@ E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug
 E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Call_WebApi_With Ajax.pdb
 E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Call_WebApi_With Ajax.Views.dll
 E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Call_WebApi_With Ajax.Views.pdb
-E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.csproj.AssemblyReference.cache
 E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.GeneratedMSBuildEditorConfig.editorconfig
 E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.AssemblyInfoInputs.cache
 E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.AssemblyInfo.cs
@@ -37,3 +36,82 @@ E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug
 E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.pdb
 E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.genruntimeconfig.cache
 E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.csproj.CopyComplete
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Humanizer.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\dotnet-aspnet-codegenerator-design.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\System.Composition.AttributedModel.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\System.Composition.Convention.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\System.Composition.Hosting.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\System.Composition.Runtime.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\System.Composition.TypedParts.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\bundleconfig.json
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Razor\Views\Home\TagCache.cshtml.g.cs

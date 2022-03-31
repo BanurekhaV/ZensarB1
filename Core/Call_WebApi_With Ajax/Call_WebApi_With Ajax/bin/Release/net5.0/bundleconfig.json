@@ -1,0 +1,13 @@
+[
+  {
+    "outputFileName": "wwwroot/css/mynewoutput.min.css",
+    "inputFiles": [
+      "wwwroot/css/site.css",
+      "wwwroot/css/MyNewStylesheet.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  }
+]

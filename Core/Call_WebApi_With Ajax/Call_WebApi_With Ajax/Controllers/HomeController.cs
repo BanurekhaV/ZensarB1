@@ -23,6 +23,11 @@ namespace Call_WebApi_With_Ajax.Controllers
             return View();
         }
 
+        public IActionResult TagCache()
+        {
+            return View();
+        }
+        
         public IActionResult Privacy()
         {
             return View();

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "TagCache";
+}
+
+<h1>TagCache</h1>
+<cache expires-after="@TimeSpan.FromSeconds(30)">
+    This is the Cached Data from Server @DateTime.Now.ToString("h:mm:ss tt")
+</cache>
+
+
+<!--<cache expires-on="@DateTime.Today.AddMinutes(10)">
+    This is cached data with time specific
+    This is cached data with time specific @DateTime.Now.ToString("h:mm:ss tt")
+</cache>-->
