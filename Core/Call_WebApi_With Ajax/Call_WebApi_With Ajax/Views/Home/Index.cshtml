@@ -1,0 +1,55 @@
+﻿<!Doctype Html>
+<head>
+    <script src="~/lib/jquery/dist//jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url:"https://localhost:44326/api/studentapi",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    alert(JSON.stringify(data));
+                    $('#div').html('');
+                    $.each(data, function (i, item) {
+                        var rows = "<tr>" +
+                            "<td id='RollNo'>" + item.rollNo + "</td>" +
+                            "<td id='Name'>" + item.name + "</td>" +
+                            "<td id='Address'>" + item.address + "</td>" +
+                            "<td id='Phone'>" + item.phone + "</td>" +
+                            "<td id='AdmissionDate'>" + Date(item.admissionDate,
+                                "dd-MM-yyyy") + "</td>" +
+                            "</tr>";
+                        $('#Table').append(rows);
+                    }); //End of foreach loop
+                    console.log(data);
+                }, // end of success function
+                failure: function (data) {
+                    alert(data.responseText);
+                }, //end of failure function
+                error: function (data) {
+                    alert(data.responseText);
+                } //end of error function
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Student Personal Data from WebAPI
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered" id="Table">
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone No</th>
+                    <th>Date Of Admission</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>

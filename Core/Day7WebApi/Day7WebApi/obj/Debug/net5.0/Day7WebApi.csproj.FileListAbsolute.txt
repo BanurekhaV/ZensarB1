@@ -29,3 +29,4 @@ E:\Banu\Zensar\Batch1\Core\Day7WebApi\Day7WebApi\obj\Debug\net5.0\Day7WebApi.dll
 E:\Banu\Zensar\Batch1\Core\Day7WebApi\Day7WebApi\obj\Debug\net5.0\ref\Day7WebApi.dll
 E:\Banu\Zensar\Batch1\Core\Day7WebApi\Day7WebApi\obj\Debug\net5.0\Day7WebApi.pdb
 E:\Banu\Zensar\Batch1\Core\Day7WebApi\Day7WebApi\obj\Debug\net5.0\Day7WebApi.genruntimeconfig.cache
+E:\Banu\Zensar\Batch1\Core\Day7WebApi\Day7WebApi\obj\Debug\net5.0\Day7WebApi.csproj.AssemblyReference.cache

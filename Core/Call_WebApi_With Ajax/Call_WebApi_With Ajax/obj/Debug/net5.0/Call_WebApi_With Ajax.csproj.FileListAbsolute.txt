@@ -1,0 +1,39 @@
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\appsettings.Development.json
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\appsettings.json
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Call_WebApi_With Ajax.exe
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Call_WebApi_With Ajax.deps.json
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Call_WebApi_With Ajax.runtimeconfig.json
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Call_WebApi_With Ajax.runtimeconfig.dev.json
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Call_WebApi_With Ajax.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\ref\Call_WebApi_With Ajax.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Call_WebApi_With Ajax.pdb
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Call_WebApi_With Ajax.Views.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\bin\Debug\net5.0\Call_WebApi_With Ajax.Views.pdb
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.csproj.AssemblyReference.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.GeneratedMSBuildEditorConfig.editorconfig
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.AssemblyInfoInputs.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.AssemblyInfo.cs
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.csproj.CoreCompileInputs.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.MvcApplicationPartsAssemblyInfo.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.RazorAssemblyInfo.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.RazorAssemblyInfo.cs
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\scopedcss\bundle\Call_WebApi_With Ajax.styles.css
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\staticwebassets\Call_WebApi_With Ajax.StaticWebAssets.Manifest.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.TagHelpers.input.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.TagHelpers.output.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.RazorCoreGenerate.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.RazorTargetAssemblyInfo.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.RazorTargetAssemblyInfo.cs
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.Views.pdb
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\ref\Call_WebApi_With Ajax.dll
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.pdb
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.genruntimeconfig.cache
+E:\Banu\Zensar\Batch1\Core\Call_WebApi_With Ajax\Call_WebApi_With Ajax\obj\Debug\net5.0\Call_WebApi_With Ajax.csproj.CopyComplete
