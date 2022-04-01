@@ -19,13 +19,16 @@ namespace Core5EF.Controllers
             _logger = logger;
             emprepo = erepo;
         }
-
+        /// <summary>
+        /// this is the index method of home controller
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             var empmodel = emprepo.GetAllEmployees();
             return View(empmodel);
         }
-
+        #region
         public ViewResult AddEmployee()
         {
             return View();
@@ -42,6 +45,9 @@ namespace Core5EF.Controllers
            Employee employee= emprepo.GetEmployeeById(Id);
             return View(employee);
         }
+        #endregion
+
+        #region
         public IActionResult Edit(int ID)
         {
             Employee emp =emprepo.GetEmployeeById(ID);
@@ -59,6 +65,7 @@ namespace Core5EF.Controllers
             emprepo.DeleteEmployee(Id);
             return RedirectToAction("Index");
         }
+        #endregion
         public IActionResult Privacy()
         {
             return View();
